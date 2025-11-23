@@ -135,7 +135,8 @@
     --card: transparent;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary brand color derived from logo: h=162, s=69%, l=16% */
+    --primary: 162 69% 16.3%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;

@@ -61,7 +61,7 @@ export const ConsentBanner = (): JSX.Element | null => {
           </button>
           <button
             onClick={accept}
-            className="px-3 py-2 rounded-md bg-[#18386e] text-white text-sm hover:opacity-95"
+            className="px-3 py-2 rounded-md bg-primary text-primary-foreground text-sm hover:opacity-95"
           >
             Accept
           </button>

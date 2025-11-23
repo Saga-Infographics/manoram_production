@@ -41,7 +41,7 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
               <img className="w-19 h-19 object-contain" alt="Manoram Production logo" src="/logo.png" />
             </div>
           <div>
-            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-base md:text-lg tracking-[0] leading-5 whitespace-nowrap">
+            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-base md:text-lg tracking-[0] leading-5 whitespace-nowrap">
               Manoram Production
             </h1>
             <p className="text-xs text-gray-500 whitespace-nowrap">Productions • Media • Collaborations</p>
@@ -55,9 +55,9 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    isActive
-                      ? "[font-family:'Open_Sans',Helvetica] text-sm px-3 py-2 rounded-lg transition-colors duration-200 font-semibold text-[#18386e]"
-                      : "[font-family:'Open_Sans',Helvetica] text-sm px-3 py-2 rounded-lg transition-colors duration-200 font-normal text-[#171a1f] hover:text-[#18386e]"
+                      isActive
+                        ? "[font-family:'Open_Sans',Helvetica] text-sm px-3 py-2 rounded-lg transition-colors duration-200 font-semibold text-primary"
+                        : "[font-family:'Open_Sans',Helvetica] text-sm px-3 py-2 rounded-lg transition-colors duration-200 font-normal text-[#171a1f] hover:text-primary"
                   }
                 >
                   {item.label}
@@ -85,12 +85,12 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
 
         {/* Mobile */}
         <div className="md:hidden flex items-center">
-          <button
+            <button
             onClick={() => setOpenMobile((v) => !v)}
             aria-label="Toggle navigation"
-            className="w-10 h-10 rounded-md flex items-center justify-center border border-gray-200"
+              className="w-10 h-10 rounded-md flex items-center justify-center border border-gray-200"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#18386e" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d={openMobile ? "M6 18L18 6M6 6l12 12" : "M3 12h18M3 6h18M3 18h18"} />
             </svg>
           </button>
@@ -108,12 +108,12 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
         {/* Compact right-side panel (nav only) */}
         <aside className={`fixed top-16 right-4 z-50 w-[320px] bg-white rounded-lg shadow-2xl transform transition-all duration-200 ${openMobile ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95 pointer-events-none'}`} role="dialog" aria-modal="true">
           <div className="relative">
-            <button
+              <button
               onClick={() => setOpenMobile(false)}
               aria-label="Close menu"
               className="absolute right-3 top-3 w-8 h-8 rounded-md flex items-center justify-center border border-gray-200 bg-white"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#18386e" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="text-primary">
                 <path d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>

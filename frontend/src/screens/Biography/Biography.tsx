@@ -62,7 +62,7 @@ export const Biography = (): JSX.Element => {
               />
             </div>
             <div>
-              <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-5xl tracking-[0] leading-[60px] mb-8">
+              <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-5xl tracking-[0] leading-[60px] mb-8">
                 Biography
               </h1>
               <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-6">
@@ -105,7 +105,7 @@ export const Biography = (): JSX.Element => {
             <div className="space-y-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="flex gap-8 items-start pb-6 border-b border-solid border-[#dee1e6] last:border-0">
-                   <span className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-3xl tracking-[0] leading-9 w-20 md:w-20 flex-shrink-0">
+                   <span className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-3xl tracking-[0] leading-9 w-20 md:w-20 flex-shrink-0">
                     {achievement.year}
                   </span>
                   <div className="flex-1">

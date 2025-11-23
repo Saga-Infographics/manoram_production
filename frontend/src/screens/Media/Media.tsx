@@ -96,7 +96,7 @@ import { SEO } from "../../components/SEO/SEO";
                     </div>
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="[font-family:'Open_Sans',Helvetica] font-semibold text-[#18386e] text-sm tracking-[0] leading-5">
+                        <span className="[font-family:'Open_Sans',Helvetica] font-semibold text-primary text-sm tracking-[0] leading-5">
                           {video.type}
                         </span>
                         <span className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-sm tracking-[0] leading-5">

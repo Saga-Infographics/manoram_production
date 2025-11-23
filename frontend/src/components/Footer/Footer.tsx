@@ -25,7 +25,7 @@ export const Footer = (): JSX.Element => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
                 <div className="w-20 h-20 bg-transparent rounded-md flex items-center justify-center">
-                    <img className="w-16 h-16 object-contain" alt="Manoram Production logo" src="/logo-circle.png" />
+                    <img className="w-16 h-16 object-contain" alt="Manoram Production logo" src="/logo.png" />
                   </div>
               <h3 className="[font-family:'Playfair_Display',Helvetica] font-bold text-white text-xl">
                 Manoram Production
@@ -35,21 +35,21 @@ export const Footer = (): JSX.Element => {
               Theatre director, playwright and performer. Creating culturally rooted productions that engage communities and spark social conversations.
             </p>
 
-            <div className="flex items-center gap-3 mt-3">
-              {socialIcons.map((icon, index) => (
-                <a
-                  key={index}
-                  href={icon.url ?? '#'}
-                  aria-label={icon.alt}
-                  className="w-9 h-9 rounded-md bg-white/6 flex items-center justify-center hover:bg-white/12 transition shadow-sm"
-                  target={icon.url && icon.url !== '#' ? '_blank' : undefined}
-                  rel={icon.url && icon.url !== '#' ? 'noopener noreferrer' : undefined}
-                >
-                  {/* SVG icons are dark; apply filter to make them visible on dark background */}
-                  <img className="w-5 h-5 filter invert brightness-150" alt={icon.alt} src={icon.src} />
-                </a>
-              ))}
-            </div>
+              <div className="flex items-center gap-3 mt-3">
+                {socialIcons.map((icon, index) => (
+                  <a
+                    key={index}
+                    href={icon.url ?? '#'}
+                    aria-label={icon.alt}
+                    className="w-9 h-9 rounded-md bg-white/6 flex items-center justify-center hover:bg-white/12 transition shadow-sm"
+                    target={icon.url && icon.url !== '#' ? '_blank' : undefined}
+                    rel={icon.url && icon.url !== '#' ? 'noopener noreferrer' : undefined}
+                  >
+                    {/* SVG icons are dark; apply filter to make them visible on dark background */}
+                    <img className="w-5 h-5 filter invert brightness-150" alt={icon.alt} src={icon.src} />
+                  </a>
+                ))}
+              </div>
           </div>
 
           <div>
@@ -70,7 +70,7 @@ export const Footer = (): JSX.Element => {
             <p className="text-sm text-slate-300 mb-3">Subscribe for occasional news about productions and events.</p>
             <form className="flex gap-2">
               <input aria-label="Email" type="email" placeholder="Your email" className="flex-1 px-3 py-2 rounded-md text-black" />
-              <button type="submit" className="bg-[#18386e] text-white px-4 py-2 rounded-md shadow">Subscribe</button>
+              <button type="submit" className="bg-primary text-primary-foreground px-4 py-2 rounded-md shadow">Subscribe</button>
             </form>
           </div>
         </div>

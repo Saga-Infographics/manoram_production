@@ -25,7 +25,7 @@ export const SocialMediaSection = (): JSX.Element => {
           <div className="w-8 h-8 bg-transparent rounded-md flex items-center justify-center">
             <img className="w-[22px] h-[22px] object-contain" alt="Manoram Production logo" src="/logo-circle.png" />
           </div>
-          <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-xl tracking-[0] leading-5 whitespace-nowrap">
+          <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-xl tracking-[0] leading-5 whitespace-nowrap">
             Manoram Production
           </h1>
         </div>
@@ -37,7 +37,7 @@ export const SocialMediaSection = (): JSX.Element => {
                 href="#"
                 className={`[font-family:'Open_Sans',Helvetica] text-sm tracking-[0] leading-[22px] whitespace-nowrap ${
                   item.active
-                    ? "font-semibold text-[#18386e]"
+                    ? "font-semibold text-primary"
                     : "font-normal text-[#171a1f]"
                 }`}
               >

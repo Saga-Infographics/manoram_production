@@ -1,13 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>manoram_production</title>
+    <meta charset="utf-8" />
+    <title>Manoram Production</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- SEO: basic meta description and canonical - siteUrl is set in src/lib/seo.ts -->
+  <meta name="description" content="Manoram Production — portfolio, projects, media, and contact for bookings and collaborations." />
+  <link rel="canonical" href="https://manoram-production.com/" />
+
+  <!-- Google tag (gtag.js) - placed in head as recommended by Google -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WSEFDC9HM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Default consent mode: deny storage until user accepts (useful for EEA)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+    gtag('js', new Date());
+    // Disable automatic page_view; the React Analytics loader will send manual page_view events on route changes
+    gtag('config', 'G-6WSEFDC9HM', { 'send_page_view': false });
+  </script>
+
+    <!-- Font loading: preconnect + stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:500,700,600|Open+Sans:400,600&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph / Twitter placeholders (can be overridden per-page by the SEO component) -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Manoram Production" />
+  <meta property="og:description" content="Manoram Production — portfolio, projects, media, and contact for bookings and collaborations." />
+  <meta property="og:url" content="https://manoram-production.com/" />
+  <meta property="og:image" content="https://manoram-production.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manoram Production" />
+  <meta name="twitter:description" content="Manoram Production — portfolio, projects, media, and contact for bookings and collaborations." />
+  <meta name="twitter:image" content="https://manoram-production.com/og-image.png" />
+
+    <link href="tailwind.css" rel="stylesheet" />
+
+    <!-- Structured data placeholder: replaced by per-page SEO component at runtime -->
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="app"></div>
+    <script type="module" src="./src/index.tsx"></script>
   </body>
 </html>

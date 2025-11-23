@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://manoram-production.com/</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://manoram-production.com/portfolio</loc>
+    <lastmod>2025-11-19</lastmod>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/barista-balaram_2.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/hostel_return2.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/maun_2013.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/jhimkey_mama.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/masantaar.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/kaalaa_pathar_mathi.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/aakashkobato.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://manoram-production.com/images/Final_sunkeshari-poster-KTM.jpg</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://manoram-production.com/biography</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://manoram-production.com/media</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://manoram-production.com/contact</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+</urlset>

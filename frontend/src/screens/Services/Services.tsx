@@ -17,7 +17,7 @@ const features = [
     title: "Production Management",
     desc: "Scheduling, budgeting and on-set coordination to keep your shoot on time and on budget.",
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-[#18386e]">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <path d="M3 7h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M5 11h14M7 15h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -27,7 +27,7 @@ const features = [
     title: "Location Scouting & Permits",
     desc: "Local expertise to find unique locations and handle permits for urban and remote shoots.",
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-[#18386e]">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <path d="M12 2v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M5 21h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -37,7 +37,7 @@ const features = [
     title: "Casting & Crew",
     desc: "Access to a vetted network of performers and technicians across Nepal.",
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-[#18386e]">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M6 20v-1a4 4 0 014-4h4a4 4 0 014 4v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -47,7 +47,7 @@ const features = [
     title: "Post Production",
     desc: "Editing, color grading, sound design and final delivery for festivals and broadcast.",
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-[#18386e]">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
         <path d="M8 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>

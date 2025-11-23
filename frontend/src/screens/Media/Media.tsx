@@ -58,7 +58,7 @@ import { SEO } from "../../components/SEO/SEO";
 
         <section className="relative w-full py-12 md:py-24 bg-white">
           <div className="container mx-auto px-6 md:px-40">
-            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-5xl tracking-[0] leading-[60px] mb-6">
+            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-5xl tracking-[0] leading-[60px] mb-6">
               Media Gallery
             </h1>
               <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-16 max-w-3xl">
@@ -90,7 +90,7 @@ import { SEO } from "../../components/SEO/SEO";
                       />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors">
-                          <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-[#18386e] border-b-8 border-b-transparent ml-1" />
+                          <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-[hsl(var(--primary))] border-b-8 border-b-transparent ml-1" />
                         </div>
                       </div>
                     </div>
@@ -108,7 +108,7 @@ import { SEO } from "../../components/SEO/SEO";
                       </h3>
                       <div className="mt-3 text-sm text-slate-500">
                         <span>Source: </span>
-                        <a href={video.source} target="_blank" rel="noopener noreferrer" className="text-[#18386e] underline decoration-blue-500 hover:decoration-blue-700">Mandala Theatre</a>
+                        <a href={video.source} target="_blank" rel="noopener noreferrer" className="text-primary underline decoration-blue-500 hover:decoration-blue-700">Mandala Theatre</a>
                       </div>
                     </div>
                   </a>

@@ -128,7 +128,7 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
                 <ul className="flex flex-col gap-6">
                   {navigationItems.map((item) => (
                     <li key={item.path}>
-                      <Link to={item.path} onClick={() => setOpenMobile(false)} className="block py-3 text-lg [font-family:'Open_Sans',Helvetica] font-medium text-[#171a1f] hover:text-[#18386e]">
+                      <Link to={item.path} onClick={() => setOpenMobile(false)} className="block py-3 text-lg [font-family:'Open_Sans',Helvetica] font-medium text-[#171a1f] hover:text-primary">
                         {item.label}
                       </Link>
                     </li>

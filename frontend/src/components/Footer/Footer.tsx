@@ -19,7 +19,7 @@ const sectionLinks = [
 
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="w-full bg-[#071024] text-white pt-16 pb-8">
+    <footer className="w-full bg-primary text-primary-foreground pt-16 pb-8">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-10">
           <div className="space-y-4">
@@ -35,21 +35,21 @@ export const Footer = (): JSX.Element => {
               Theatre director, playwright and performer. Creating culturally rooted productions that engage communities and spark social conversations.
             </p>
 
-              <div className="flex items-center gap-3 mt-3">
-                {socialIcons.map((icon, index) => (
-                  <a
-                    key={index}
-                    href={icon.url ?? '#'}
-                    aria-label={icon.alt}
-                    className="w-9 h-9 rounded-md bg-white/6 flex items-center justify-center hover:bg-white/12 transition shadow-sm"
-                    target={icon.url && icon.url !== '#' ? '_blank' : undefined}
-                    rel={icon.url && icon.url !== '#' ? 'noopener noreferrer' : undefined}
-                  >
-                    {/* SVG icons are dark; apply filter to make them visible on dark background */}
-                    <img className="w-5 h-5 filter invert brightness-150" alt={icon.alt} src={icon.src} />
-                  </a>
-                ))}
-              </div>
+            <div className="flex items-center gap-3 mt-3">
+              {socialIcons.map((icon, index) => (
+                <a
+                  key={index}
+                  href={icon.url ?? '#'}
+                  aria-label={icon.alt}
+                  className="w-9 h-9 rounded-md bg-white/6 flex items-center justify-center hover:bg-white/12 transition shadow-sm"
+                  target={icon.url && icon.url !== '#' ? '_blank' : undefined}
+                  rel={icon.url && icon.url !== '#' ? 'noopener noreferrer' : undefined}
+                >
+                  {/* SVG icons are dark; apply filter to make them visible on dark background */}
+                  <img className="w-5 h-5 filter invert brightness-150" alt={icon.alt} src={icon.src} />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>

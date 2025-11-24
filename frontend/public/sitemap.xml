@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://manoram-production.com/</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-11-24</lastmod>
   </url>
   <url>
     <loc>https://manoram-production.com/portfolio</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-11-24</lastmod>
       <image:image>
         <image:loc>https://manoram-production.com/images/barista-balaram_2.jpg</image:loc>
       </image:image>
@@ -33,15 +33,11 @@
       </image:image>
   </url>
   <url>
-    <loc>https://manoram-production.com/biography</loc>
-    <lastmod>2025-11-19</lastmod>
-  </url>
-  <url>
-    <loc>https://manoram-production.com/media</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://manoram-production.com/about</loc>
+    <lastmod>2025-11-24</lastmod>
   </url>
   <url>
     <loc>https://manoram-production.com/contact</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-11-24</lastmod>
   </url>
 </urlset>

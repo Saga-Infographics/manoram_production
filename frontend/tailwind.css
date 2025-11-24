@@ -12,11 +12,13 @@
 }
 
 .animate-fade-in {
-  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+  /* Slightly faster and smoother entrance */
+  animation: fade-in 700ms var(--animation-delay, 0s) cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-fade-up {
-  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+  /* Subtle upward reveal with smoother easing */
+  animation: fade-up 700ms var(--animation-delay, 0s) cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-marquee {
@@ -60,7 +62,7 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px) scale(0.995);
   }
 
   to {
@@ -72,7 +74,11 @@
 @keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px) scale(0.998);
+  }
+
+  60% {
+    transform: translateY(-2px) scale(1.001);
   }
 
   to {
@@ -150,7 +156,12 @@
 
     --ring: 215 20.2% 65.1%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Elevation & shadows tuned for the brand */
+    --shadow-1: 0 6px 18px rgba(13,70,53,0.06);
+    --shadow-2: 0 12px 32px rgba(13,70,53,0.10);
+    --shadow-3: 0 20px 60px rgba(13,70,53,0.12);
   }
 
   .dark {
@@ -184,6 +195,21 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-[var(--radius)] border border-input p-6 shadow-sm;
+    box-shadow: var(--shadow-1);
+  }
+
+  .container-modern {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 

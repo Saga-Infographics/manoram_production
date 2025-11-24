@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./screens/Home";
 import { Biography } from "./screens/Biography";
 import { Portfolio } from "./screens/Portfolio";
-import { Media } from "./screens/Media";
 import { Contact } from "./screens/Contact";
 import { Services } from "./screens/Services";
 import Analytics from "./lib/analytics";
@@ -17,10 +16,9 @@ createRoot(document.getElementById("app") as HTMLElement).render(
       <ConsentBanner />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/biography" element={<Biography />} />
+        <Route path="/about" element={<Biography />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/media" element={<Media />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

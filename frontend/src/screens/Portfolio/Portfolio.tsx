@@ -3,9 +3,8 @@ import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer";
 import { SEO } from "../../components/SEO/SEO";
 import { Button } from "../../components/ui/button";
-import { Card } from "../../components/ui/card";
 
-const categories = ["All", "Director", "Actor", "Writer"];
+// production categories removed — portfolio displays company productions by default
 
 const portfolioItems = [
   {
@@ -14,7 +13,7 @@ const portfolioItems = [
     year: "2025",
     role: "Actor",
     description: "Recently released film in which he played the role of Maila.",
-    image: "/images/barista-balaram_2.jpg",
+    image: "https://source.unsplash.com/800x1000/?actor,portrait",
   },
   {
     title: "Hostel Returns",
@@ -22,7 +21,7 @@ const portfolioItems = [
     year: "2015",
     role: "Actor (Breakout role: 'Pk Don')",
     description: "Breakout film role in the popular Nepali movie 'Hostel Returns' (2015).",
-    image: "/images/hostel_return2.jpg",
+    image: "https://source.unsplash.com/800x1000/?film,actors",
   },
   {
     title: "Maun",
@@ -30,7 +29,7 @@ const portfolioItems = [
     year: "2013",
     role: "Actor",
     description: "Maun (2013) - Appeared as Aman's friend in the film.",
-    image: "/images/maun_2013.jpg",
+    image: "https://source.unsplash.com/800x1000/?drama,stage",
   },
   {
     title: "Jhimkey Mama",
@@ -38,7 +37,7 @@ const portfolioItems = [
     year: "2020",
     role: "Writer & Director",
     description: "Original play based on a real story told by advocate Durga Prasad Pandey, set in imaginary village Deurali",
-    image: "/images/jhimkey_mama.jpg",
+    image: "https://source.unsplash.com/800x1000/?theatre,stage",
   },
   {
     title: "Masaantaar",
@@ -46,7 +45,7 @@ const portfolioItems = [
     year: "2017",
     role: "Writer & Director",
     description: "Story of a young boy and his sister who tries to go against superstitions but is threatened by the society and people who have strong belief on ghosts and traditional healers.",
-    image: "/images/masantaar.jpg",
+    image: "https://source.unsplash.com/800x1000/?actors,performance",
   },
   {
     title: "Kalapattharmathi",
@@ -54,7 +53,7 @@ const portfolioItems = [
     year: "2017",
     role: "Director",
     description: "Theatrical production at Mandala Theatre Nepal",
-    image: "/images/kaalaa_pathar_mathi.jpg",
+    image: "https://source.unsplash.com/800x1000/?mountain,portrait",
   },
   {
     title: "Aakash Ko Bato",
@@ -63,7 +62,7 @@ const portfolioItems = [
     role: "Director",
     description:
       "Stage production presented by Mandala Theatre (Aakash Ko Bato / The Sky Route). Visit Mandala Theatre for production details and credits.",
-    image: "/images/aakashkobato.webp",
+    image: "https://source.unsplash.com/800x1000/?sky,route,landscape",
   },
   {
     title: "Sunkeshari",
@@ -71,7 +70,7 @@ const portfolioItems = [
     year: "2023",
     role: "Actor",
     description: "A play based on a Karnali folk story; premiered at Rongo Harshe Bingo Barshe (Dhaka, 2012) and opened Kathmandu International Theatre Festival 2012; later staged at major festivals including Bharat Rang Mahotsav.",
-    image: "/images/Final_sunkeshari-poster-KTM.jpg",
+    image: "https://source.unsplash.com/800x1000/?poster,art",
   },
   {
     title: "Masaantaar",
@@ -79,7 +78,7 @@ const portfolioItems = [
     year: "2017",
     role: "Playwright",
     description: "60-minute play exploring contradictions between conservative and modern mindsets in rural villages",
-    image: "/images/masantaar.jpg",
+    image: "https://source.unsplash.com/800x1000/?actors,performance",
   },
   {
     title: "Jhimke Mama",
@@ -87,12 +86,12 @@ const portfolioItems = [
     year: "2020",
     role: "Playwright",
     description: "Original play based on a real story told by advocate Durga Prasad Pandey, set in imaginary village Deurali",
-    image: "/images/jhimkey_mama.jpg",
+    image: "https://source.unsplash.com/800x1000/?theatre,stage",
   },
 ];
 
 export const Portfolio = (): JSX.Element => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  // no category filter for company-focused site; show all deduped productions
 
   // Build structured data for each production (CreativeWork)
   const structuredData = portfolioItems.map((item) => ({
@@ -109,12 +108,7 @@ export const Portfolio = (): JSX.Element => {
   }));
 
   const filteredItems = (() => {
-    if (activeCategory !== "All") {
-      return portfolioItems.filter((item) => item.category === activeCategory);
-    }
-
-    // When viewing "All", dedupe items by title so the same production
-    // (which may have multiple entries for different roles) only appears once.
+    // show all productions but dedupe by title so a production with multiple role entries appears once
     const seen = new Set<string>();
     return portfolioItems.filter((item) => {
       const key = (item.title || "").toString().toLowerCase().trim();
@@ -150,28 +144,13 @@ export const Portfolio = (): JSX.Element => {
             A collection of theatrical works spanning directing, writing, and acting. Each production explores Nepali culture, social issues, and the human experience through powerful storytelling.
           </p>
 
-          <div className="flex justify-center gap-4 mb-16">
-            {categories.map((category) => (
-                <Button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  variant={activeCategory === category ? "default" : "outline"}
-                  className={
-                    activeCategory === category
-                      ? "bg-primary hover:bg-primary/90 text-primary-foreground px-8"
-                      : "border-[#dee1e6] text-[#171a1f] hover:bg-slate-50 px-8"
-                  }
-                >
-                  {category}
-                </Button>
-            ))}
-          </div>
+          {/* Category filters removed: portfolio shows company productions by default */}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item, index) => (
-              <Card key={index} className="group cursor-pointer overflow-hidden">
+              <article key={index} className="card group cursor-pointer overflow-hidden animate-fade-up" style={{ ['--animation-delay' as any]: `${0.04 * index}s` }}>
                 <div className="relative">
-                  <div className="aspect-[4/5] bg-slate-200 overflow-hidden">
+                  <div className="aspect-[4/5] bg-slate-200 overflow-hidden rounded-md">
                     {item.image ? (
                       <img
                         src={item.image}
@@ -181,6 +160,15 @@ export const Portfolio = (): JSX.Element => {
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
                     )}
+                  </div>
+
+                  <div className="absolute top-4 left-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shadow-sm">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                        <path d="M12 2v6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M5 21h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
                   </div>
 
                   {/* Overlay with CTA */}
@@ -212,7 +200,7 @@ export const Portfolio = (): JSX.Element => {
                     {item.description}
                   </p>
                 </div>
-              </Card>
+              </article>
             ))}
           </div>
         </div>

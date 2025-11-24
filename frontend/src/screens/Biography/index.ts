@@ -1,1 +1,1 @@
-export { Biography } from "./Biography";
+export { BiographyPage as Biography } from "./BiographyPage";

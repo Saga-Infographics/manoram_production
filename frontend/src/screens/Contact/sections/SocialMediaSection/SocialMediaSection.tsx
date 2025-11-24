@@ -1,20 +1,22 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
+import FacebookIcon from "../../../../components/icons/FacebookIcon";
+import InstagramIcon from "../../../../components/icons/InstagramIcon";
+import YoutubeIcon from "../../../../components/icons/YoutubeIcon";
 
 const navigationItems = [
   { label: "Home", active: false },
   { label: "About", active: false },
   { label: "Productions", active: false },
   { label: "Services", active: false },
-  { label: "Media", active: false },
   { label: "Contact", active: true },
 ];
 
 const socialMediaIcons = [
-  { alt: "Facebook", src: "/facebook.svg" },
-  { alt: "Instagram", src: "/instagram.svg" },
-  { alt: "Linked in", src: "/linkedin-1.svg" },
-  { alt: "You tube", src: "/youtube-1.svg" },
+  { Icon: FacebookIcon, alt: "Facebook" },
+  { Icon: InstagramIcon, alt: "Instagram" },
+  { Icon: InstagramIcon, alt: "Linked in" },
+  { Icon: YoutubeIcon, alt: "You tube" },
 ];
 
 export const SocialMediaSection = (): JSX.Element => {
@@ -48,16 +50,14 @@ export const SocialMediaSection = (): JSX.Element => {
         </ul>
 
         <div className="flex items-center gap-3">
-          {socialMediaIcons.map((icon, index) => (
-            <Button
-              key={index}
-              variant="ghost"
-              size="icon"
-              className="w-10 h-10 rounded-md p-0"
-            >
-              <img className="w-4 h-4" alt={icon.alt} src={icon.src} />
-            </Button>
-          ))}
+          {socialMediaIcons.map((icon, index) => {
+            const Icon = icon.Icon;
+            return (
+              <Button key={index} variant="ghost" size="icon" className="w-11 h-11 rounded-md p-0 text-primary border-2 border-[#dee1e6]">
+                <Icon className="w-7 h-7" />
+              </Button>
+            );
+          })}
         </div>
       </nav>
     </header>

@@ -1,18 +1,20 @@
 import React from "react";
 import { Separator } from "../../../../components/ui/separator";
+import FacebookIcon from "../../../../components/icons/FacebookIcon";
+import InstagramIcon from "../../../../components/icons/InstagramIcon";
+import YoutubeIcon from "../../../../components/icons/YoutubeIcon";
 
 const socialIcons = [
-  { src: "/container-3.svg", alt: "Social icon 1" },
-  { src: "/container.svg", alt: "Social icon 2" },
-  { src: "/container-1.svg", alt: "Social icon 3" },
-  { src: "/container-2.svg", alt: "Social icon 4" },
+  { Icon: FacebookIcon, alt: "Social icon 1" },
+  { Icon: InstagramIcon, alt: "Social icon 2" },
+  { Icon: InstagramIcon, alt: "Social icon 3" },
+  { Icon: YoutubeIcon, alt: "Social icon 4" },
 ];
 
 const sectionLinks = [
   { label: "Home" },
-  { label: "Biography" },
+  { label: "About" },
   { label: "Portfolio" },
-  { label: "Media" },
   { label: "Contact" },
 ];
 
@@ -28,15 +30,18 @@ export const InquiryFormSection = (): JSX.Element => {
               Elegant portfolio for an actor.
             </p>
             <div className="flex gap-6">
-              {socialIcons.map((icon, index) => (
-                <button
-                  key={index}
-                  className="w-5 h-5 flex items-center justify-center hover:opacity-70 transition-opacity"
-                  aria-label={icon.alt}
-                >
-                  <img className="w-5 h-5" alt={icon.alt} src={icon.src} />
-                </button>
-              ))}
+              {socialIcons.map((icon, index) => {
+                const Icon = icon.Icon;
+                return (
+                  <button
+                    key={index}
+                    className="w-9 h-9 flex items-center justify-center hover:opacity-80 transition-opacity text-primary border-2 border-[#dee1e6] rounded-md"
+                    aria-label={icon.alt}
+                  >
+                    <Icon className="w-7 h-7" />
+                  </button>
+                );
+              })}
             </div>
           </div>
 

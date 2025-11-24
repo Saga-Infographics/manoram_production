@@ -1,6 +1,9 @@
 import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import FacebookIcon from "../icons/FacebookIcon";
+import InstagramIcon from "../icons/InstagramIcon";
+import YoutubeIcon from "../icons/YoutubeIcon";
 
 interface HeaderProps {
   activePage?: string;
@@ -8,17 +11,16 @@ interface HeaderProps {
 
 const navigationItems = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/biography" },
+  { label: "About", path: "/about" },
   { label: "Productions", path: "/portfolio" },
   { label: "Services", path: "/services" },
-  { label: "Media", path: "/media" },
   { label: "Contact", path: "/contact" },
 ];
 
 const socialMediaIcons = [
-  { alt: "Facebook", src: "/facebook.svg", url: "#" },
-  { alt: "Instagram", src: "/instagram.svg", url: "#" },
-  { alt: "YouTube", src: "/youtube-1.svg", url: "#" },
+  { Icon: FacebookIcon, alt: "Facebook", url: "#" },
+  { Icon: InstagramIcon, alt: "Instagram", url: "#" },
+  { Icon: YoutubeIcon, alt: "YouTube", url: "#" },
 ];
 
 export const Header = ({ }: HeaderProps): JSX.Element => {
@@ -34,14 +36,14 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
   }, [openMobile]);
 
   return (
-    <header className="w-full bg-white/70 backdrop-blur-sm sticky top-0 z-40 shadow-sm border-b border-slate-100">
-      <nav className="max-w-[1200px] mx-auto flex items-center justify-between gap-6 px-6 py-4">
-        <Link to="/" className="flex items-center gap-3">
+    <header className="w-full bg-white/70 backdrop-blur-md sticky top-0 z-50 shadow-md border-b border-transparent">
+      <nav className="container-modern flex items-center justify-between gap-6 py-4">
+        <Link to="/" className="flex items-center gap-4">
             <div className="w-24 h-24 bg-transparent rounded-md flex items-center justify-center shadow-sm">
-              <img className="w-19 h-19 object-contain" alt="Manoram Production logo" src="/logo.png" />
+              <img className="w-20 h-20 object-contain" alt="Manoram Production logo" src="/logo.png" />
             </div>
           <div>
-            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-base md:text-lg tracking-[0] leading-5 whitespace-nowrap">
+            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-lg md:text-xl tracking-[0] leading-5 whitespace-nowrap">
               Manoram Production
             </h1>
             <p className="text-xs text-gray-500 whitespace-nowrap">Productions • Media • Collaborations</p>
@@ -49,15 +51,15 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6">
+          <ul className="flex items-center gap-4">
             {navigationItems.map((item) => (
               <li key={item.path}>
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                      isActive
-                        ? "[font-family:'Open_Sans',Helvetica] text-sm px-3 py-2 rounded-lg transition-colors duration-200 font-semibold text-primary"
-                        : "[font-family:'Open_Sans',Helvetica] text-sm px-3 py-2 rounded-lg transition-colors duration-200 font-normal text-[#171a1f] hover:text-primary"
+                    isActive
+                      ? "[font-family:'Open_Sans',Helvetica] text-sm px-4 py-2 rounded-full transition-colors duration-200 font-semibold text-primary bg-primary/10 shadow-sm"
+                      : "[font-family:'Open_Sans',Helvetica] text-sm px-4 py-2 rounded-full transition-colors duration-200 font-normal text-slate-800 hover:bg-primary/10 hover:text-primary"
                   }
                 >
                   {item.label}
@@ -67,18 +69,21 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
           </ul>
 
           <div className="flex items-center gap-4">
-            <Button asChild variant="primary" className="px-4 py-2">
+            <Button asChild variant="primary" className="px-5 py-3 shadow-[var(--shadow-2)] hover:shadow-[var(--shadow-3)] transform hover:-translate-y-0.5 rounded-full">
               <a href="/contact">Get a Quote</a>
             </Button>
 
             <div className="flex items-center gap-3">
-              {socialMediaIcons.map((icon) => (
-                <a key={icon.alt} href={icon.url} target="_blank" rel="noopener noreferrer" aria-label={icon.alt} className="inline-block">
-                  <Button variant="ghost" size="icon" className="w-10 h-10 rounded-md p-0 hover:bg-[#f6f9ff]">
-                    <img className="w-4 h-4" alt={icon.alt} src={icon.src} />
-                  </Button>
-                </a>
-              ))}
+              {socialMediaIcons.map((icon) => {
+                const Icon = icon.Icon;
+                return (
+                  <a key={icon.alt} href={icon.url} target="_blank" rel="noopener noreferrer" aria-label={icon.alt} className="inline-block">
+                    <Button variant="ghost" size="icon" className="w-11 h-11 rounded-full p-0 hover:bg-primary/10 text-primary border-2 border-primary/30">
+                      <Icon className="w-6 h-6" />
+                    </Button>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

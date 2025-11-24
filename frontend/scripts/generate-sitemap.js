@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const siteUrl = process.argv[2] || 'https://manoram-production.com/';
-const routes = ['/', '/portfolio', '/biography', '/media', '/contact'];
+const routes = ['/', '/portfolio', '/about', '/contact'];
 
 // Image list for portfolio page (keeps sitemap in sync with portfolio posters)
 const portfolioImages = [

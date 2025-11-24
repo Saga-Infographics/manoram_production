@@ -3,14 +3,7 @@ import { Footer } from "../../components/Footer";
 import { SEO } from "../../components/SEO/SEO";
 import HeroImage from "../../components/ui/HeroImage";
 import { Button } from "../../components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/card";
+// Card components replaced by `.card` markup for consistent styling
 
 const features = [
   {
@@ -99,25 +92,27 @@ export const Services = (): JSX.Element => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((f, idx) => (
-              <Card key={idx} className="hover:shadow-lg transition-shadow duration-200">
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 flex items-center justify-center rounded-md bg-[#eaf3ff]">
-                      {f.icon}
-                    </div>
-                    <CardTitle>{f.title}</CardTitle>
+              <article key={idx} className="card hover:shadow-lg transition-shadow duration-200 animate-fade-up" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                    {f.icon}
                   </div>
-                  <CardDescription className="mt-2">{f.desc}</CardDescription>
-                </CardHeader>
-                <CardContent>
+                  <div>
+                    <h3 className="font-semibold text-lg">{f.title}</h3>
+                    <p className="text-sm text-[#47555b] mt-2">{f.desc}</p>
+                  </div>
+                </div>
+
+                <div className="mt-4">
                   <p className="text-sm text-[#47555b]">We tailor each service to the project's needs — contact us to discuss logistics, crew, and timelines.</p>
-                </CardContent>
-                <CardFooter>
+                </div>
+
+                <div className="mt-4">
                   <Button asChild variant="primary" size="sm">
                     <a href="/contact">Contact Us</a>
                   </Button>
-                </CardFooter>
-              </Card>
+                </div>
+              </article>
             ))}
           </div>
         </div>

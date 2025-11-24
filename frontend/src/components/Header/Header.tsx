@@ -38,10 +38,13 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
   return (
     <header className="w-full bg-white/70 backdrop-blur-md sticky top-0 z-50 shadow-md border-b border-transparent">
       <nav className="container-modern flex items-center justify-between gap-6 py-4">
-        <Link to="/" className="flex items-center gap-4">
-            <div className="w-24 h-24 bg-transparent rounded-md flex items-center justify-center shadow-sm">
-              <img className="w-20 h-20 object-contain" alt="Manoram Production logo" src="/logo.png" />
-            </div>
+        <Link
+          to="/"
+          className={`flex items-center gap-4 transition-opacity duration-200 ${openMobile ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        >
+          <div className="w-16 h-16 md:w-24 md:h-24 bg-transparent rounded-md flex items-center justify-center shadow-sm">
+            <img className="w-14 h-14 md:w-20 md:h-20 object-contain" alt="Manoram Production logo" src="/logo.png" />
+          </div>
           <div>
             <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-lg md:text-xl tracking-[0] leading-5 whitespace-nowrap">
               Manoram Production
@@ -124,11 +127,11 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
             </button>
 
             {/* Small logo to match the navbar */}
-            <div className="absolute left-3 top-3 w-20 h-20 bg-transparent rounded-md flex items-center justify-center">
-              <img className="w-16 h-16 object-contain" alt="Manoram Production logo" src="/logo-circle.png" />
+              <div className="absolute left-3 top-3 w-20 h-20 bg-transparent rounded-md flex items-center justify-center">
+              <img className="w-16 h-16 object-contain" alt="Manoram Production logo" src="/logo.png" />
             </div>
 
-            <div className="px-6 pt-6 pb-2">
+            <div className="px-6 pt-20 pb-2">
               <nav>
                 <ul className="flex flex-col gap-6">
                   {navigationItems.map((item) => (

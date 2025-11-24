@@ -183,14 +183,14 @@ export const Home = (): JSX.Element => {
       />
       <Header activePage="Home" />
       <section
-        className="relative w-full h-[680px] md:h-[760px] bg-cover bg-center"
+        className="relative w-full min-h-[56vh] md:min-h-[70vh] lg:min-h-[75vh] bg-cover bg-center"
         style={{ backgroundImage: `url('/images/pkdai2.jpg')` }}
         aria-label="Hero - Manoram Production"
       >
         {/* dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/25" />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 h-full flex items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <div className="inline-block bg-black/50 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8">
               <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-3xl md:text-5xl mb-3">
@@ -222,8 +222,8 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative w-full py-20 bg-slate-50">
-        <div className="container mx-auto px-6 md:px-40">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="aspect-square rounded-lg overflow-hidden">
               <img
                 src="/images/pkdai2.jpg"
@@ -260,7 +260,7 @@ export const Home = (): JSX.Element => {
 
       {/* Our Statistics - modernized */}
       <section className="w-full py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-40">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <h2 className="text-center [font-family:'Playfair_Display',Helvetica] font-semibold text-3xl mb-8">Our Statistics</h2>
 
           {/* stats with gradient cards and count-up */}
@@ -317,7 +317,7 @@ export const Home = (): JSX.Element => {
 
       {/* Team section */}
       <section className="w-full py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-40">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-3xl mb-6 text-center">Our Team</h2>
           <p className="text-center text-slate-700 max-w-3xl mx-auto mb-8">A curated team of directors, producers, and technical crew who bring productions to life.</p>
 
@@ -337,9 +337,9 @@ export const Home = (): JSX.Element => {
 
       {/* Clients / Logos */}
       <section className="w-full py-12 bg-slate-50">
-        <div className="container mx-auto px-6 md:px-40">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <h3 className="text-center text-2xl font-semibold mb-6">Clients & Partners</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 items-center">
             {clients.map((c, idx) => (
               <div key={idx} className="flex flex-col items-center justify-center p-4 bg-white rounded-md shadow-sm transition-all duration-200 animate-fade-up" style={{ ['--animation-delay' as any]: `${0.04 * idx}s` }}>
                 <img src={c.img} alt={c.name} className="max-h-12 object-contain mb-2" loading="lazy" />

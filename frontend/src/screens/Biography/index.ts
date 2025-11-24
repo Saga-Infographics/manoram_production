@@ -1,1 +1,2 @@
-export { BiographyPage as Biography } from "./BiographyPage";
+export { Biography } from "./Biography";
+export { default } from "./Biography";

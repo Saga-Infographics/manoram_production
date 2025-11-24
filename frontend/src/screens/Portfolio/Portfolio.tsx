@@ -136,8 +136,8 @@ export const Portfolio = (): JSX.Element => {
       <Header activePage="Productions" />
 
       <section className="relative w-full py-24 bg-white">
-        <div className="container mx-auto px-6 md:px-40">
-          <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-5xl tracking-[0] leading-[60px] mb-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-4xl md:text-5xl tracking-[0] leading-[60px] mb-6 text-center">
             Productions
           </h1>
           <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-12 text-center max-w-3xl mx-auto">
@@ -217,8 +217,8 @@ export const Portfolio = (): JSX.Element => {
         >
           <div className="absolute inset-0 bg-black/60" />
 
-          <div className="relative z-10 w-full h-full" onClick={(e) => e.stopPropagation()}>
-            <div className="relative bg-transparent h-full overflow-hidden">
+          <div className="relative z-10 max-w-6xl w-full max-h-[90vh] mx-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="relative bg-transparent max-h-[90vh] overflow-auto">
               <button
                 onClick={closeModal}
                 aria-label="Close"
@@ -227,20 +227,20 @@ export const Portfolio = (): JSX.Element => {
                 ×
               </button>
 
-              <div className="flex flex-col md:flex-row w-full h-full">
-                <div className="md:w-1/2 w-full h-full flex items-center justify-center bg-black">
+              <div className="flex flex-col md:flex-row w-full">
+                <div className="md:w-1/2 w-full flex items-center justify-center bg-black">
                   {selectedItem.image ? (
                     <img
                       src={selectedItem.image}
                       alt={selectedItem.title}
-                      className="h-full max-w-full object-contain"
+                      className="max-h-[70vh] w-full max-w-full object-contain"
                     />
                   ) : (
                     <div className="w-full h-full bg-slate-800" />
                   )}
                 </div>
 
-                <div className="md:w-1/2 w-full h-full bg-black/60 backdrop-blur-sm text-white p-6 md:p-12 overflow-auto">
+                <div className="md:w-1/2 w-full bg-black/60 backdrop-blur-sm text-white p-6 md:p-12 overflow-auto">
                   <h2 className="[font-family:'Playfair_Display',Helvetica] font-bold text-4xl mb-4">
                     {selectedItem.title}
                   </h2>

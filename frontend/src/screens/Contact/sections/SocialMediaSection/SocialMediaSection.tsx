@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../../../../components/ui/button";
 import FacebookIcon from "../../../../components/icons/FacebookIcon";
 import InstagramIcon from "../../../../components/icons/InstagramIcon";
@@ -22,10 +21,10 @@ const socialMediaIcons = [
 export const SocialMediaSection = (): JSX.Element => {
   return (
     <header className="w-full h-16 bg-white shadow-[0px_0px_1px_#171a1f0d,0px_0px_2px_#171a1f14]">
-      <nav className="w-full h-full flex items-center justify-between px-6">
+      <nav className="w-full h-full flex items-center justify-between px-4 md:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-transparent rounded-md flex items-center justify-center">
-            <img className="w-[22px] h-[22px] object-contain" alt="Manoram Production logo" src="/logo-circle.png" />
+            <img className="w-[22px] h-[22px] object-contain" alt="Manoram Production logo" src="/logo.png" />
           </div>
           <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-xl tracking-[0] leading-5 whitespace-nowrap">
             Manoram Production

@@ -59,7 +59,7 @@ export const Services = (): JSX.Element => {
       <Header activePage="Services" />
 
       <section className="relative w-full py-20 bg-gradient-to-b from-[#f8fbff] to-white">
-        <div className="container mx-auto px-6 md:px-40">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#0f2650] text-4xl md:text-5xl mb-4">
@@ -80,7 +80,7 @@ export const Services = (): JSX.Element => {
             </div>
 
             <div className="flex justify-center">
-              <HeroImage src="/images/pkdai2.jpg" alt="On location" caption="On-location production in Nepal" rotate={-6} className="md:!w-full" />
+              <HeroImage src="/images/pkdai2.jpg" alt="On location" caption="On-location production in Nepal" rotate={-6} className="w-full max-w-lg md:max-w-none" />
             </div>
           </div>
         </div>

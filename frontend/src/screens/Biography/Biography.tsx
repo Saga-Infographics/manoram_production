@@ -42,18 +42,6 @@ const achievements = [
     description:
       "A company production presented at Mandala Theatre that focused on identity and community across Nepal. Manoram Production handled full development, staging and festival distribution, including a national tour.",
   },
-  {
-    year: "2020",
-    title: "Production — 'Masaantaar'",
-    description:
-      "An original Manoram Production play blending political satire with folklore; staged regionally with community workshops and outreach programs developed by the company.",
-  },
-  {
-    year: "2017",
-    title: "Production — 'Kaalaa Patthar Maathi'",
-    description:
-      "A socially-driven company production examining rural livelihoods and resilience; showcased at Mandala Theatre and invited to regional festivals under Manoram's production management.",
-  },
 ];
 
 const services = [
@@ -63,7 +51,6 @@ const services = [
     summary: "End-to-end production coordination",
     detail:
       "End-to-end production coordination — from budgeting and scheduling to on-set logistics and vendor management. We deliver organized shoots that respect timelines and creative vision.",
-    lead: "4–16 weeks",
   },
   {
     id: "location-scouting",
@@ -71,7 +58,6 @@ const services = [
     summary: "Scout locations & secure permits",
     detail:
       "Scout visually striking locations and secure necessary permits and local liaison support — whether urban streets or remote landscapes — so your production runs smoothly.",
-    lead: "2–8 weeks",
   },
   {
     id: "casting-crew",
@@ -79,7 +65,6 @@ const services = [
     summary: "Actors, presenters and technical crew",
     detail:
       "We connect directors with carefully vetted actors, presenters and technical crew. Our casting process prioritizes fit, reliability and creative collaboration for each project.",
-    lead: "2–8 weeks",
   },
   {
     id: "post-production",
@@ -87,7 +72,6 @@ const services = [
     summary: "Offline/online editing, grading, mix",
     detail:
       "Comprehensive post workflows including offline/online editing, color grading, sound mixing and delivery masters optimized for festival, broadcast and digital platforms.",
-    lead: "2–8 weeks",
   },
 ];
 
@@ -111,7 +95,6 @@ function ServicesAccordion({ items }: { items: typeof services }) {
                 <div className="text-sm text-slate-600">{it.summary}</div>
               </div>
               <div className="ml-4">
-                <span className="text-sm text-slate-500">{it.lead}</span>
                 <svg
                   className={`w-5 h-5 ml-3 transform transition-transform duration-200 ${isOpen ? "rotate-180" : "rotate-0"}`}
                   viewBox="0 0 20 20"
@@ -232,9 +215,7 @@ export const Biography = (): JSX.Element => {
                         </div>
                       </div>
 
-                      <div className="mt-4">
-                        <span className="text-xs text-slate-400">{s.lead}</span>
-                      </div>
+                      {/* duration removed */}
                     </div>
                   );
                 })}
@@ -270,15 +251,7 @@ export const Biography = (): JSX.Element => {
               </div>
             </div>
 
-            <div className="p-6 bg-gradient-to-b from-white to-slate-50 border rounded-2xl">
-              <h5 className="font-semibold">Our Partners</h5>
-              <div className="mt-3 grid grid-cols-2 gap-3">
-                <img src="/images/client-1.png" alt="Client" className="h-10 object-contain" />
-                <img src="/images/client-2.png" alt="Client" className="h-10 object-contain" />
-                <img src="/images/client-3.png" alt="Client" className="h-10 object-contain" />
-                <img src="/images/client-4.png" alt="Client" className="h-10 object-contain" />
-              </div>
-            </div>
+            {/* Our Partners block removed per request */}
           </aside>
         </section>
 

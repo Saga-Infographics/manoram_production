@@ -168,13 +168,13 @@ export const Home = (): JSX.Element => {
         title="Home"
         description="Manoram Production — Nepal-based production house offering theatre direction, location shoots, casting, post-production and full production management. Contact us for film, stage and event production."
         path="/"
-        image="/images/pkdai2.jpg"
+        image="/public/cover.jpg"
         structuredData={[orgStructuredData, ...servicesStructured]}
       />
       <Header activePage="Home" />
       <section
         className="relative w-full min-h-[56vh] md:min-h-[70vh] lg:min-h-[75vh] bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/pkdai2.jpg')` }}
+        style={{ backgroundImage: `url('/public/cover.jpg')` }}
         aria-label="Hero - Manoram Production"
       >
         {/* dark overlay for contrast */}
@@ -216,7 +216,7 @@ export const Home = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="aspect-square rounded-lg overflow-hidden">
               <img
-                src="/images/pkdai2.jpg"
+                src="/public/logo.png"
                 alt="On location - Manoram Production"
                 className="w-full h-full object-cover block rounded-lg"
                 loading="lazy"

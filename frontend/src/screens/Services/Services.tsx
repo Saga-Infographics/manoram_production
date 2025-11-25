@@ -3,12 +3,18 @@ import { Footer } from "../../components/Footer";
 import { SEO } from "../../components/SEO/SEO";
 import HeroImage from "../../components/ui/HeroImage";
 import { Button } from "../../components/ui/button";
+import { Link } from "react-router-dom";
 // Card components replaced by `.card` markup for consistent styling
 
 const features = [
   {
     title: "Production Management",
     desc: "Scheduling, budgeting and on-set coordination to keep your shoot on time and on budget.",
+    items: [
+      'Budgeting & cost control',
+      'Scheduling, call sheets & on-set coordination',
+      'Vendor & location logistics'
+    ],
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <path d="M3 7h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -19,6 +25,11 @@ const features = [
   {
     title: "Location Scouting & Permits",
     desc: "Local expertise to find unique locations and handle permits for urban and remote shoots.",
+    items: [
+      'Location reports with reference photos',
+      'Permit applications & local liaison',
+      'Access planning for remote sites'
+    ],
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <path d="M12 2v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -29,6 +40,11 @@ const features = [
   {
     title: "Casting & Crew",
     desc: "Access to a vetted network of performers and technicians across Nepal.",
+    items: [
+      'Casting calls and audition coordination',
+      'Vetted local technicians and support crew',
+      'Contracts, scheduling and payroll support'
+    ],
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -39,6 +55,11 @@ const features = [
   {
     title: "Post Production",
     desc: "Editing, color grading, sound design and final delivery for festivals and broadcast.",
+    items: [
+      'Offline & online editing workflows',
+      'Color grading and delivery masters',
+      'Sound design, mixing and stems'
+    ],
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
         <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
@@ -90,9 +111,9 @@ export const Services = (): JSX.Element => {
         <div className="container mx-auto px-6 md:px-40">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-3xl mb-8 text-center">What We Offer</h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {features.map((f, idx) => (
-              <article key={idx} className="card hover:shadow-lg transition-shadow duration-200 animate-fade-up" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
+              <article key={idx} className="card hover:shadow-lg transition-shadow duration-200 animate-fade-up flex flex-col justify-between h-full" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
                     {f.icon}
@@ -103,13 +124,21 @@ export const Services = (): JSX.Element => {
                   </div>
                 </div>
 
-                <div className="mt-4">
+                {f.items && (
+                  <ul className="mt-10 text-sm text-slate-600 list-disc list-inside space-y-1 max-w-[36ch]">
+                    {f.items.map((it, j) => (
+                      <li key={j}>{it}</li>
+                    ))}
+                  </ul>
+                )}
+
+                <div className="mt-10">
                   <p className="text-sm text-[#47555b]">We tailor each service to the project's needs — contact us to discuss logistics, crew, and timelines.</p>
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-10">
                   <Button asChild variant="primary" size="sm">
-                    <a href="/contact">Contact Us</a>
+                    <Link to="/contact">Contact Us</Link>
                   </Button>
                 </div>
               </article>

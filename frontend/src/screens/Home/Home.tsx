@@ -77,17 +77,7 @@ export const Home = (): JSX.Element => {
       ) },
   ];
 
-  // Clients array (keeps names and local images)
-  const clients = [
-    { name: 'Mandala', img: '/images/client-1.png' },
-    { name: 'FestivalX', img: '/images/client-2.png' },
-    { name: 'KTM TV', img: '/images/client-3.png' },
-    { name: 'NepalDocs', img: '/images/client-4.png' },
-    { name: 'StudioA', img: '/images/client-5.png' },
-    { name: 'BrandCo', img: '/images/client-6.png' },
-    { name: 'EventWorks', img: '/images/client-7.png' },
-    { name: 'CinemaHouse', img: '/images/client-8.png' },
-  ];
+  // Clients removed from Home — list kept in case we re-add later
 
   const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
   const statsRef = useRef<HTMLDivElement | null>(null);
@@ -258,9 +248,24 @@ export const Home = (): JSX.Element => {
         </div>
       </section>
 
+      {/* Featured Work */}
+      <section className="relative w-full py-24 bg-white">
+        <div className="container mx-auto px-6 md:px-40">
+          <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-6 text-center">
+            Featured Work
+          </h2>
+          <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-16 text-center max-w-3xl mx-auto">
+            Explore some of Manoram Production's key performances and projects.
+          </p>
+
+          {/* Featured items (commented out examples) */}
+          {/* Replace or re-enable items as needed */}
+        </div>
+      </section>
+
       {/* Our Statistics - modernized */}
       <section className="w-full py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <h2 className="text-center [font-family:'Playfair_Display',Helvetica] font-semibold text-3xl mb-8">Our Statistics</h2>
 
           {/* stats with gradient cards and count-up */}
@@ -291,20 +296,28 @@ export const Home = (): JSX.Element => {
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl mb-6 text-center">Services — Full Breakdown</h2>
           <p className="text-center text-slate-700 max-w-3xl mx-auto mb-8">Below is a more detailed overview of our core services. Use these quick links to reach the right team member or request a tailored quote.</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {features.map((f, i) => (
-              <article key={i} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 animate-fade-up" style={{ ['--animation-delay' as any]: `${0.06 * i}s` }}>
+              <article key={i} className="card hover:shadow-lg transition-shadow duration-200 animate-fade-up flex flex-col justify-between h-full" style={{ ['--animation-delay' as any]: `${0.06 * i}s` }}>
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center">{f.icon}</div>
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                    {f.icon}
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">{f.title}</h3>
-                    <p className="text-sm text-slate-600 mb-3">{f.desc}</p>
-                    <div className="flex gap-3 items-center">
-                      <Button asChild variant="outline" className="px-4 py-2">
-                        <Link to="/services">Learn More</Link>
-                      </Button>
-                      <Button asChild variant="primary" className="px-4 py-2">
-                        <Link to="/contact">Get Quote</Link>
+                    <h3 className="font-semibold text-lg">{f.title}</h3>
+                    <p className="text-sm text-slate-600 mt-2">{f.desc}</p>
+                  </div>
+                </div>
+
+                <div className="mt-10">
+                  <div className="flex items-center gap-3 w-full">
+                    <Button asChild variant="outline" size="sm" className="px-3 py-1.5 rounded-full whitespace-nowrap shrink-0">
+                      <Link to="/services">Learn More</Link>
+                    </Button>
+
+                    <div className="ml-auto">
+                      <Button asChild variant="primary" size="sm" className="whitespace-nowrap shrink-0">
+                        <Link to="/contact">Contact Us</Link>
                       </Button>
                     </div>
                   </div>
@@ -315,40 +328,9 @@ export const Home = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Team section */}
-      <section className="w-full py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-3xl mb-6 text-center">Our Team</h2>
-          <p className="text-center text-slate-700 max-w-3xl mx-auto mb-8">A curated team of directors, producers, and technical crew who bring productions to life.</p>
+      {/* Team section removed per request */}
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[1,2,3,4].map((n, idx) => (
-              <div key={n} className="text-center bg-white rounded-lg p-4 shadow-sm animate-fade-up" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
-                <div className="w-full h-40 rounded-md overflow-hidden mb-3 bg-slate-100">
-                  <img src={`/images/team-${n}.jpg`} alt={`Team member ${n}`} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <h4 className="font-semibold">Member Name {n}</h4>
-                <p className="text-sm text-slate-600">Producer / Director</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Clients / Logos */}
-      <section className="w-full py-12 bg-slate-50">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <h3 className="text-center text-2xl font-semibold mb-6">Clients & Partners</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 items-center">
-            {clients.map((c, idx) => (
-              <div key={idx} className="flex flex-col items-center justify-center p-4 bg-white rounded-md shadow-sm transition-all duration-200 animate-fade-up" style={{ ['--animation-delay' as any]: `${0.04 * idx}s` }}>
-                <img src={c.img} alt={c.name} className="max-h-12 object-contain mb-2" loading="lazy" />
-                <div className="text-xs text-slate-700">{c.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Clients & Partners section removed per request */}
 
       {/* FAQ + Newsletter + CTA cluster */}
       <section className="w-full py-16 bg-white">
@@ -401,72 +383,7 @@ export const Home = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="relative w-full py-24 bg-white">
-        <div className="container mx-auto px-6 md:px-40">
-          <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-6 text-center">
-            Featured Work
-          </h2>
-          <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-16 text-center max-w-3xl mx-auto">
-            Explore some of Manoram Production's key performances and projects.
-          </p>
-
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Jhimke Mama",
-                type: "Play (Director & Writer)",
-                description:
-                  "An original play (2020) written and directed by the company, based on a real story by Durga Prasad Pandey. Set in the village of Deurali, it explores identity and community perspectives.",
-                // Put the poster image (place the file at public/images/jhimke-mama-poster.jpg)
-                image: "/images/jhimkey_mama.jpg"
-              },
-              {
-                title: "Masaantaar",
-                type: "Play (Writer & Director)",
-                description:
-                  "Story of a young boy and his sister who tries to go against superstitions but is threatened by the society and people who have strong belief on ghosts and traditional healers.",
-                image: "/images/masantaar.jpg"
-              },
-              {
-                title: "Kaalaa Patthar Maathi",
-                type: "Play (Director)",
-                description: "Sufferings of a mother residing in mountains who wants to keep her family alive and together.",
-                // Poster from Mandala Theatre page — place at public/images/kaalaa-patthar-maathi.jpg
-                image: "/images/kaalaa_pathar_mathi.jpg"
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="group cursor-pointer transform transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="aspect-[4/5] bg-slate-200 rounded-lg mb-4 overflow-hidden relative">
-                  {item.image ? (
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-contain block bg-black"
-                      loading="lazy"
-                      decoding="async"
-                      onError={(e) => {
-                        // hide the broken image so the gradient fallback is visible
-                        (e.currentTarget as HTMLImageElement).style.display = 'none';
-                      }}
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
-                  )}
-                </div>
-                <h3 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-xl tracking-[0] leading-7 mb-2">
-                  {item.title}
-                </h3>
-                <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-base tracking-[0] leading-6">
-                  {item.type}
-                </p>
-                <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-sm tracking-[0] leading-5 mt-2">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div> */}
-        </div>
-      </section>
+      {/* Featured Work was moved earlier in the document */}
 
       <Footer />
     </div>

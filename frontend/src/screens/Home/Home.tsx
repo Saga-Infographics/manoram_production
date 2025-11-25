@@ -180,9 +180,9 @@ export const Home = (): JSX.Element => {
         {/* dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/25" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 h-full flex items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 h-full flex items-center justify-center">
           <div className="max-w-2xl text-white">
-            <div className="inline-block bg-black/50 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8">
+              <div className="inline-block bg-black/50 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8 transform translate-y-8 md:translate-y-12">
               <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-3xl md:text-5xl mb-3">
                 Manoram Production
               </h1>

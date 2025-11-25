@@ -41,9 +41,11 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
         <Link
           to="/"
           className={`flex items-center gap-4 transition-opacity duration-200 ${openMobile ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+          aria-label="Go to homepage"
+          title="Manoram Production — Home"
         >
-          <div className="w-16 h-16 md:w-24 md:h-24 bg-transparent rounded-md flex items-center justify-center shadow-sm">
-            <img className="w-14 h-14 md:w-20 md:h-20 object-contain" alt="Manoram Production logo" src="/logo.png" />
+          <div className="w-20 h-20 md:w-28 md:h-28 bg-transparent rounded-md flex items-center justify-center shadow-md">
+            <img className="w-16 h-16 md:w-24 md:h-24 object-contain drop-shadow-sm" alt="Manoram Production logo" src="/logo.png" title="Manoram Production" />
           </div>
           <div>
             <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-lg md:text-xl tracking-[0] leading-5 whitespace-nowrap">
@@ -127,8 +129,8 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
             </button>
 
             {/* Small logo to match the navbar */}
-              <div className="absolute left-3 top-3 w-20 h-20 bg-transparent rounded-md flex items-center justify-center">
-              <img className="w-16 h-16 object-contain" alt="Manoram Production logo" src="/logo.png" />
+              <div className="absolute left-3 top-3 w-24 h-24 bg-transparent rounded-md flex items-center justify-center">
+              <img className="w-20 h-20 object-contain drop-shadow-sm" alt="Manoram Production logo" src="/logo.png" title="Manoram Production" />
             </div>
 
             <div className="px-6 pt-20 pb-2">

@@ -127,7 +127,7 @@ export const Biography = (): JSX.Element => {
     "@type": "Organization",
     name: "Manoram Production",
     url: "https://manoramproduction.example",
-    logo: "/images/pkdai2.jpg",
+    logo: "/cover.jpg",
     sameAs: [
       "https://facebook.com/yourpage",
       "https://instagram.com/yourpage",
@@ -176,12 +176,12 @@ export const Biography = (): JSX.Element => {
 
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/images/pkdai2.jpg"
-              alt="Manoram Production"
+              src="/cover.jpg"
+              alt="Manoram Production cover"
               className="w-full h-72 md:h-96 object-cover block"
               loading="lazy"
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/images/pkdai.png';
+                (e.currentTarget as HTMLImageElement).src = '/images/pkdai2.jpg';
               }}
             />
           </div>

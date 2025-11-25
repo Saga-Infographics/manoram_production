@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer";
 import { SEO } from "../../components/SEO/SEO";
-import HeroImage from "../../components/ui/HeroImage";
+// plain image used for hero (no animation)
 import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
 // Card components replaced by `.card` markup for consistent styling
@@ -101,7 +101,9 @@ export const Services = (): JSX.Element => {
             </div>
 
             <div className="flex justify-center">
-              <HeroImage src="/images/pkdai2.jpg" alt="On location" caption="On-location production in Nepal" rotate={-6} className="w-full max-w-lg md:max-w-none" />
+              <div className="w-full max-w-lg md:max-w-none flex items-center justify-center">
+                <img src="/logo.png" alt="Manoram Production logo" className="w-48 h-48 md:w-64 md:h-64 object-contain" loading="lazy" />
+              </div>
             </div>
           </div>
         </div>

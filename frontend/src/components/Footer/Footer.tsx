@@ -36,7 +36,7 @@ export const Footer = (): JSX.Element => {
               </h3>
             </div>
             <p className="text-sm text-slate-800 max-w-md">
-              Theatre director, playwright and performer. Creating culturally rooted productions that engage communities and spark social conversations.
+              Manoram Production is a creative production house producing culturally rooted theatre, film and live events that engage communities and spark social conversations.
             </p>
 
             <div className="flex items-center gap-3 mt-3">

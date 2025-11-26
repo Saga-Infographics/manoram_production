@@ -26,7 +26,7 @@ export const InquiryFormSection = (): JSX.Element => {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-8 md:gap-16">
           <div className="flex flex-col gap-10">
             <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1f] text-base tracking-[0] leading-6">
-              Elegant portfolio for an actor.
+              Showcasing Manoram Production — company productions, collaborations and services for stage, screen and events.
             </p>
             <div className="flex gap-6">
               {socialIcons.map((icon, index) => {

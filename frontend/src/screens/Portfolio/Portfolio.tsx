@@ -8,12 +8,12 @@ import { Button } from "../../components/ui/button";
 
 const portfolioItems = [
   {
-    title: "Barista Balaram",
-    category: "Actor",
-    year: "2025",
-    role: "Actor",
-    description: "Recently released film in which he played the role of Maila.",
-    image: "https://source.unsplash.com/800x1000/?actor,portrait",
+    title: "Jhimke Mama — Stage Production",
+    category: "Theatre",
+    year: "2024",
+    role: "Produced by Manoram Production",
+    description: "A company production that toured nationally and explored themes of identity and community across Nepal.",
+    image: "https://source.unsplash.com/800x1000/?theatre,stage",
   },
 ];
 
@@ -26,11 +26,12 @@ export const Portfolio = (): JSX.Element => {
     "@type": "CreativeWork",
     name: item.title,
     description: item.description,
-    image: item.image ? `https://manoram-production.com${item.image}` : undefined,
+    image: item.image ? item.image : undefined,
     datePublished: item.year && item.year !== "—" ? item.year : undefined,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: "Manoram Production",
+      url: "https://manoram-production.com",
     },
   }));
 

@@ -1,4 +1,4 @@
-import { SITE, structuredDataPerson } from '../../lib/seo';
+import { SITE, structuredDataPerson, structuredDataOrganization } from '../../lib/seo';
 
 type Props = {
   title?: string;
@@ -38,9 +38,9 @@ export const SEO = ({ title, description, path, image, structuredData, noindex }
   <meta name="twitter:site" content={SITE.twitter} />
   <meta name="twitter:creator" content={SITE.twitter} />
 
-      {/* Structured data: Person */}
+      {/* Structured data: Organization (company-focused default) */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredDataPerson()),
+        __html: JSON.stringify(structuredDataOrganization()),
       }} />
 
       {/* Optional additional structured data (CreativeWork, etc) */}

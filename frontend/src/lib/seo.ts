@@ -19,3 +19,14 @@ export const structuredDataPerson = (overrides = {}) => ({
   ],
   ...overrides,
 });
+
+export const structuredDataOrganization = (overrides = {}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.title,
+  url: SITE.siteUrl,
+  logo: SITE.siteUrl.replace(/\/$/, '') + SITE.defaultImage,
+  sameAs: [],
+  contactPoint: [],
+  ...overrides,
+});

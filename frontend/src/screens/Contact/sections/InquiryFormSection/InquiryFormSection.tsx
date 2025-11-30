@@ -34,7 +34,7 @@ export const InquiryFormSection = (): JSX.Element => {
                 return (
                   <button
                     key={index}
-                    className="w-9 h-9 flex items-center justify-center hover:opacity-80 transition-opacity text-primary border-2 border-[#dee1e6] rounded-md"
+                    className="w-9 h-9 flex items-center justify-center hover:opacity-80 transition-opacity text-secondary border-2 border-[#dee1e6] rounded-md"
                     aria-label={icon.alt}
                   >
                     <Icon className="w-7 h-7" />

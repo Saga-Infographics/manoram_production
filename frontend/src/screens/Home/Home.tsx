@@ -271,16 +271,16 @@ export const Home = (): JSX.Element => {
           {/* stats with gradient cards and count-up */}
           <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s, i) => (
-              <div key={i} className="rounded-2xl transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <div className="p-8 bg-gradient-to-br from-primary to-primary/70 text-white flex flex-col items-center justify-center gap-2">
-                  <div className="bg-white/10 rounded-full p-3 mb-3 text-white">
+              <div key={i} className="rounded-2xl transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl">
+                <div className="p-8 bg-secondary text-secondary-foreground flex flex-col items-center justify-center gap-2 rounded-2xl">
+                  <div className="bg-primary text-primary-foreground rounded-full p-4 mb-3 shadow-md ring-1 ring-white/10">
                     {s.icon}
                   </div>
-                  <div className="text-4xl md:text-5xl font-extrabold tracking-tight">
+                  <div className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
                     {counts[i]}
-                    <span className="text-xl align-super">+</span>
+                    <span className="text-xl align-super text-white">+</span>
                   </div>
-                  <div className="mt-2 uppercase text-sm tracking-wider text-white/90 text-center max-w-[10ch]">
+                  <div className="mt-2 uppercase text-sm tracking-wider text-white/80 text-center max-w-[10ch]">
                     {s.label}
                   </div>
                 </div>
@@ -369,11 +369,11 @@ export const Home = (): JSX.Element => {
                 <Button type="submit" variant="primary">Subscribe</Button>
               </form>
 
-              <div className="mt-8 p-6 bg-gradient-to-r from-primary to-primary/70 text-white rounded-2xl animate-fade-up" style={{ ['--animation-delay' as any]: '0.08s' }}>
+              <div className="mt-8 p-6 bg-black text-white rounded-2xl animate-fade-up" style={{ ['--animation-delay' as any]: '0.08s' }}>
                 <h4 className="text-xl font-semibold">Ready to start your production?</h4>
                 <p className="text-sm opacity-90">Tell us about your project and we'll prepare a tailored plan and estimate.</p>
                 <div className="mt-4">
-                  <Button asChild variant="ghost" className="bg-white/10 text-white px-4 py-2 rounded-md">
+                  <Button asChild variant="primary" className="px-4 py-2 rounded-md">
                     <Link to="/contact">Contact Our Team</Link>
                   </Button>
                 </div>

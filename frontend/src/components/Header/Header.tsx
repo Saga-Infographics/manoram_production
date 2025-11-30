@@ -83,7 +83,7 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
                 const Icon = icon.Icon;
                 return (
                   <a key={icon.alt} href={icon.url} target="_blank" rel="noopener noreferrer" aria-label={icon.alt} className="inline-block">
-                    <Button variant="ghost" size="icon" className="w-11 h-11 rounded-full p-0 hover:bg-primary/10 text-primary border-2 border-primary/30">
+                    <Button variant="ghost" size="icon" className="w-11 h-11 rounded-full p-0 hover:bg-secondary/10 text-secondary border-2 border-secondary/30">
                       <Icon className="w-6 h-6" />
                     </Button>
                   </a>

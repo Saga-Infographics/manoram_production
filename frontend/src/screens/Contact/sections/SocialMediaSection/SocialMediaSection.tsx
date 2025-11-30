@@ -52,7 +52,7 @@ export const SocialMediaSection = (): JSX.Element => {
           {socialMediaIcons.map((icon, index) => {
             const Icon = icon.Icon;
             return (
-              <Button key={index} variant="ghost" size="icon" className="w-11 h-11 rounded-md p-0 text-primary border-2 border-[#dee1e6]">
+              <Button key={index} variant="ghost" size="icon" className="w-11 h-11 rounded-md p-0 text-secondary border-2 border-[#dee1e6]">
                 <Icon className="w-7 h-7" />
               </Button>
             );

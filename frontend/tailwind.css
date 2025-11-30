@@ -127,19 +127,19 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --foreground: 0 0% 20%; /* #333333 */
 
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 0 0% 46.7%; /* #777777 */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 0 0% 20%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
 
     --card: transparent;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 0 0% 20%;
 
      /* Brand palette (updated to match logo):
        Primary: Navy (#0A0F2C) ~ 231 63% 11%
@@ -150,11 +150,11 @@
      --primary: 231 63% 11%;
      --primary-foreground: 0 0% 100%;
 
-     --secondary: 42 87% 62.8%;
-     --secondary-foreground: 0 0% 12%;
+    --secondary: 42 87% 62.8%; /* Gold #F3C14D */
+    --secondary-foreground: 231 63% 11%; /* Navy on gold */
 
-     --accent: 0 0% 100%;
-     --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 100%; /* White */
+    --accent-foreground: 0 0% 20%;
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;

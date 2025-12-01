@@ -211,7 +211,7 @@ export const Home = (): JSX.Element => {
         </button>
       </section>
 
-      <section className="relative w-full py-20 bg-slate-50">
+      <section className="relative w-full py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="aspect-square rounded-lg overflow-hidden">
@@ -249,7 +249,7 @@ export const Home = (): JSX.Element => {
       </section>
 
       {/* Featured Work */}
-      <section className="relative w-full py-24 bg-white">
+      <section className="relative w-full py-24 bg-transparent">
         <div className="container mx-auto px-6 md:px-40">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-6 text-center">
             Featured Work
@@ -264,7 +264,7 @@ export const Home = (): JSX.Element => {
       </section>
 
       {/* Our Statistics - modernized */}
-      <section className="w-full py-16 bg-white">
+      <section className="w-full py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <h2 className="text-center [font-family:'Playfair_Display',Helvetica] font-semibold text-3xl mb-8">Our Statistics</h2>
 
@@ -299,7 +299,7 @@ export const Home = (): JSX.Element => {
       </section>
 
       {/* Expanded Services - larger, descriptive cards */}
-      <section className="w-full py-16 bg-gray-50">
+      <section className="w-full py-16 bg-transparent">
         <div className="container mx-auto px-6 md:px-40">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl mb-6 text-center">Services — Full Breakdown</h2>
           <p className="text-center text-slate-700 max-w-3xl mx-auto mb-8">Below is a more detailed overview of our core services. Use these quick links to reach the right team member or request a tailored quote.</p>
@@ -341,7 +341,7 @@ export const Home = (): JSX.Element => {
       {/* Clients & Partners section removed per request */}
 
       {/* FAQ + Newsletter + CTA cluster */}
-      <section className="w-full py-16 bg-white">
+      <section className="w-full py-16 bg-transparent">
         <div className="container mx-auto px-6 md:px-40">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>

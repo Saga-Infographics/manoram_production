@@ -63,7 +63,7 @@ export const Portfolio = (): JSX.Element => {
       <SEO title="Productions" description="Selected theatrical and film work presented by Manoram Production — directing, writing and acting credits." path="/productions" structuredData={structuredData} />
       <Header activePage="Productions" />
 
-      <section className="relative w-full py-24 bg-white">
+      <section className="relative w-full py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-4xl md:text-5xl tracking-[0] leading-[60px] mb-6 text-center">
             Productions

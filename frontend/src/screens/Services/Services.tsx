@@ -132,7 +132,7 @@ export const Services = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="w-full py-20 bg-white">
+      <section className="w-full py-20 bg-transparent">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-3xl mb-8 text-center">What We Offer</h2>
 

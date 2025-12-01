@@ -271,24 +271,32 @@ export const Home = (): JSX.Element => {
           {/* stats with gradient cards and count-up */}
           <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s, i) => (
-              <div key={i} className="group rounded-3xl transform transition-transform duration-400 hover:-translate-y-5 hover:shadow-2xl relative overflow-hidden animate-fade-up" style={{ ['--animation-delay' as any]: `${0.04 * i}s` }}>
-                <div className="p-10 bg-secondary/78 text-secondary-foreground flex flex-col items-center justify-center gap-4 rounded-3xl border-t-4 border-primary/70 relative">
-                  {/* small gold accent ribbon */}
-                  <div className="absolute top-4 left-4 w-14 h-1.5 bg-primary/85 rounded-full opacity-95 pointer-events-none transform transition-all duration-300 ease-out group-hover:w-24 group-hover:translate-x-1" />
+              <div
+                key={i}
+                className="group rounded-3xl transform transition-all duration-400 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(23,26,31,0.12)] relative overflow-visible animate-fade-up"
+                style={{ ['--animation-delay' as any]: `${0.04 * i}s` }}
+              >
+                <div className="card-stats">
+                  <div className="top-track" aria-hidden />
 
-                  {/* decorative soft glow */}
-                  <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/12 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute -top-8 -right-8 w-36 h-36 bg-primary/12 rounded-full blur-3xl pointer-events-none opacity-80" />
 
-                  <div className="bg-gradient-to-br from-primary/100 via-primary/95 to-primary/85 text-primary-foreground rounded-full w-20 h-20 flex items-center justify-center mb-4 shadow-2xl ring-1 ring-white/6 transform transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1">
-                    {s.icon}
+                  <div className="icon-outer transform transition-transform duration-300 group-hover:scale-105 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary-foreground">
+                      {s.icon}
+                    </div>
                   </div>
 
-                  <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-black leading-none">
-                    {counts[i]}
-                    <span className="text-xl align-super text-white">+</span>
+                  {/* number */}
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-black leading-none flex items-start gap-2">
+                    <span>{counts[i]}</span>
+                    <span className="text-xl self-start text-primary/90 mt-2">+</span>
                   </div>
 
-                  <div className="mt-2 uppercase text-sm tracking-wider text-black/70 text-center max-w-[14ch]">
+                  {/* thin gold divider */}
+                  <div className="w-16 h-1 rounded-full bg-gradient-to-r from-primary/90 to-primary/60 mt-2" />
+
+                  <div className="mt-3 uppercase text-sm tracking-wider text-black/70 text-center max-w-[16ch]">
                     {s.label}
                   </div>
                 </div>

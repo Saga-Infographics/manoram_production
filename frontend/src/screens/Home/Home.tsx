@@ -271,16 +271,24 @@ export const Home = (): JSX.Element => {
           {/* stats with gradient cards and count-up */}
           <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s, i) => (
-              <div key={i} className="rounded-2xl transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl">
-                <div className="p-8 bg-secondary text-secondary-foreground flex flex-col items-center justify-center gap-2 rounded-2xl">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 mb-3 shadow-md ring-1 ring-white/10">
+              <div key={i} className="group rounded-3xl transform transition-transform duration-400 hover:-translate-y-5 hover:shadow-2xl relative overflow-hidden animate-fade-up" style={{ ['--animation-delay' as any]: `${0.04 * i}s` }}>
+                <div className="p-10 bg-secondary/78 text-secondary-foreground flex flex-col items-center justify-center gap-4 rounded-3xl border-t-4 border-primary/70 relative">
+                  {/* small gold accent ribbon */}
+                  <div className="absolute top-4 left-4 w-14 h-1.5 bg-primary/85 rounded-full opacity-95 pointer-events-none transform transition-all duration-300 ease-out group-hover:w-24 group-hover:translate-x-1" />
+
+                  {/* decorative soft glow */}
+                  <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/12 rounded-full blur-3xl pointer-events-none" />
+
+                  <div className="bg-gradient-to-br from-primary/100 via-primary/95 to-primary/85 text-primary-foreground rounded-full w-20 h-20 flex items-center justify-center mb-4 shadow-2xl ring-1 ring-white/6 transform transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1">
                     {s.icon}
                   </div>
-                  <div className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-black leading-none">
                     {counts[i]}
                     <span className="text-xl align-super text-white">+</span>
                   </div>
-                  <div className="mt-2 uppercase text-sm tracking-wider text-white/80 text-center max-w-[10ch]">
+
+                  <div className="mt-2 uppercase text-sm tracking-wider text-black/70 text-center max-w-[14ch]">
                     {s.label}
                   </div>
                 </div>

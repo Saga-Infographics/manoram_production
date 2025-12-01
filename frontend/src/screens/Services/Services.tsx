@@ -71,7 +71,7 @@ const features = [
 
 export const Services = (): JSX.Element => {
   return (
-    <div className="bg-white w-full relative">
+    <div className="w-full relative">
       <SEO
         title="Services"
         description="Production services offered by Manoram Production — production management, location scouting, permits, and post-production."
@@ -84,17 +84,21 @@ export const Services = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <div className="inline-flex items-center gap-3 mb-3">
-                <span className="w-10 h-1 rounded-full bg-primary/90 block" />
-                <span className="text-sm font-medium text-secondary/80">Services</span>
-              </div>
+                  <span className="w-10 h-1 rounded-full bg-primary/90 block" />
+                  <span className="text-sm font-medium text-secondary/80">Services</span>
+                </div>
 
-              <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-secondary text-4xl md:text-6xl mb-4 leading-tight">
-                End-to-end Production Services
-              </h1>
+                <div className="relative max-w-2xl">
+                  <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-secondary text-4xl md:text-6xl mb-4 leading-tight">
+                    <span className="inline-block mr-2 bg-gradient-to-r from-primary/0 via-primary/20 to-transparent px-2 py-1 rounded">End-to-end</span>
+                    Production Services
+                  </h1>
+                  <div className="absolute -left-6 -top-6 w-24 h-24 rounded-full bg-primary/10 blur-2xl pointer-events-none opacity-60" />
+                </div>
 
-              <p className="[font-family:'Open_Sans',Helvetica] text-lg text-[#55595d] mb-6 max-w-2xl leading-relaxed">
-                From pre-production and location permits to full production management and post-production. We combine local knowledge with international standards to deliver productions that meet creative and logistical goals.
-              </p>
+                <p className="[font-family:'Open_Sans',Helvetica] text-lg text-[#55595d] mb-6 max-w-2xl leading-relaxed">
+                  From pre-production and location permits to full production management and post-production. We combine local knowledge with international standards to deliver productions that meet creative and logistical goals.
+                </p>
 
               {/* CTA moved to the right column on larger screens per request */}
             </div>
@@ -103,6 +107,13 @@ export const Services = (): JSX.Element => {
               <div className="w-full max-w-sm md:max-w-md lg:max-w-lg transform hover:scale-[1.02] transition-transform duration-400 relative flex flex-col items-center md:items-end">
                 <img src="/cover.jpg" alt="Production on location" className="w-full h-auto rounded-2xl shadow-2xl object-cover" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-gradient-to-br from-primary/20 to-transparent blur-3xl opacity-60 pointer-events-none" />
+
+                {/* play overlay */}
+                <a href="#" className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-auto md:right-6 md:translate-x-0 md:-translate-y-1/2">
+                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg ring-4 ring-primary/20 hover:scale-105 transition-transform">
+                    <svg className="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="currentColor"/></svg>
+                  </div>
+                </a>
 
                 <div className="mt-6 md:mt-8 w-full flex flex-col items-center md:items-end md:flex-row md:justify-end md:gap-4">
                   <div className="flex gap-4 items-center">
@@ -127,12 +138,12 @@ export const Services = (): JSX.Element => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {features.map((f, idx) => (
-              <article key={idx} className="card group relative overflow-hidden rounded-2xl transform hover:-translate-y-2 transition-shadow duration-300 p-6 flex flex-col justify-between" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
+              <article key={idx} className="card group relative overflow-hidden rounded-2xl transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-400 p-6 flex flex-col justify-between" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
                 <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-primary to-primary/70" />
 
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-primary/95 to-primary/70 text-primary-foreground shadow-md relative">
-                    {f.icon}
+                  <div className="w-18 h-18 flex items-center justify-center rounded-full bg-gradient-to-br from-primary/95 to-primary/70 text-primary-foreground shadow-xl relative md:w-20 md:h-20">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 flex items-center justify-center">{f.icon}</div>
                     <span className="absolute -inset-2 rounded-full blur-sm opacity-40 bg-gradient-to-br from-primary/30 to-transparent" />
                   </div>
                   <div>

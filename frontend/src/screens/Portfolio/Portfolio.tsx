@@ -59,7 +59,7 @@ export const Portfolio = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="bg-white w-full relative">
+    <div className="w-full relative">
       <SEO title="Productions" description="Selected theatrical and film work presented by Manoram Production — directing, writing and acting credits." path="/productions" structuredData={structuredData} />
       <Header activePage="Productions" />
 

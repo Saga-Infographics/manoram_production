@@ -163,7 +163,7 @@ export const Home = (): JSX.Element => {
   }));
 
   return (
-    <div className="bg-white w-full relative">
+    <div className="w-full relative">
       <SEO
         title="Home"
         description="Manoram Production — Nepal-based production house offering theatre direction, location shoots, casting, post-production and full production management. Contact us for film, stage and event production."

@@ -145,7 +145,7 @@ export const Biography = (): JSX.Element => {
   } as const;
 
   return (
-    <div className="bg-white w-full relative">
+    <div className="w-full relative">
       <SEO
         title="About"
         description="Manoram Production — a Kathmandu-based production house creating theatre, film and media rooted in Nepali culture. Read about our company, services and major works."

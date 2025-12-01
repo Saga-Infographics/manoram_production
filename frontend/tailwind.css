@@ -246,7 +246,14 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    /* Use a subtle horizontal cream → white gradient as the app background
+       so all pages share the same soft, warm canvas. Fall back to the
+       single background color when gradients aren't supported. */
+    background-color: hsl(var(--background));
+    background-image: linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background)) 28%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

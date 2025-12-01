@@ -18,11 +18,11 @@ const socialMediaButtons = [
 
 export const Contact = (): JSX.Element => {
   return (
-    <div className="bg-white w-full relative">
+    <div className="w-full relative">
       <SEO title="Contact" description="Contact and booking information for Manoram Production — email, phone, and social profiles." path="/contact" />
       <Header activePage="Contact" />
 
-      <section className="w-full py-12 md:py-24 bg-white">
+      <section className="w-full py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
             {/* Left: Contact details & quick info */}

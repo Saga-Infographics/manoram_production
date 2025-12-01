@@ -4,6 +4,7 @@ import { SEO } from "../../components/SEO/SEO";
 // plain image used for hero (no animation)
 import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
+import React from "react";
 // Card components replaced by `.card` markup for consistent styling
 
 const features = [
@@ -70,6 +71,7 @@ const features = [
 ];
 
 export const Services = (): JSX.Element => {
+  // Testimonials carousel removed per design request
   return (
     <div className="w-full relative">
       <SEO
@@ -83,24 +85,21 @@ export const Services = (): JSX.Element => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="inline-flex items-center gap-3 mb-3">
-                  <span className="w-10 h-1 rounded-full bg-primary/90 block" />
-                  <span className="text-sm font-medium text-secondary/80">Services</span>
-                </div>
+              <div className="inline-flex items-center gap-3 mb-4">
+                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Services</span>
+                <span className="text-sm text-slate-600">Comprehensive production services for stage, film and events</span>
+              </div>
 
-                <div className="relative max-w-2xl">
-                  <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-secondary text-4xl md:text-6xl mb-4 leading-tight">
-                    <span className="inline-block mr-2 bg-gradient-to-r from-primary/0 via-primary/20 to-transparent px-2 py-1 rounded">End-to-end</span>
-                    Production Services
-                  </h1>
-                  <div className="absolute -left-6 -top-6 w-24 h-24 rounded-full bg-primary/10 blur-2xl pointer-events-none opacity-60" />
-                </div>
+              <div className="relative max-w-2xl">
+                <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-secondary text-4xl md:text-6xl mb-4 leading-tight">
+                  End-to-end Production Services
+                </h1>
+                <div className="absolute -left-8 -top-8 w-28 h-28 rounded-full bg-primary/12 blur-3xl pointer-events-none opacity-80" />
+              </div>
 
-                <p className="[font-family:'Open_Sans',Helvetica] text-lg text-[#55595d] mb-6 max-w-2xl leading-relaxed">
-                  From pre-production and location permits to full production management and post-production. We combine local knowledge with international standards to deliver productions that meet creative and logistical goals.
-                </p>
-
-              {/* CTA moved to the right column on larger screens per request */}
+              <p className="[font-family:'Open_Sans',Helvetica] text-lg text-[#55595d] mb-6 max-w-2xl leading-relaxed">
+                From pre-production and location permits to full production management and post-production — we combine local insight with international standards to deliver efficient, creative productions.
+              </p>
             </div>
 
             <div className="flex justify-center">
@@ -110,8 +109,10 @@ export const Services = (): JSX.Element => {
 
                 {/* play overlay */}
                 <a href="#" className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-auto md:right-6 md:translate-x-0 md:-translate-y-1/2">
-                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg ring-4 ring-primary/20 hover:scale-105 transition-transform">
-                    <svg className="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="currentColor"/></svg>
+                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg ring-4 ring-primary/20 hover:scale-105 transition-transform">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                      <svg className="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="currentColor"/></svg>
+                    </div>
                   </div>
                 </a>
 
@@ -132,19 +133,18 @@ export const Services = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="w-full py-20 bg-transparent">
+      <section className="w-full py-20">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
-          <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-3xl mb-8 text-center">What We Offer</h2>
+          <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-secondary text-3xl mb-8 text-center">What We Offer</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {features.map((f, idx) => (
-              <article key={idx} className="card group relative overflow-hidden rounded-2xl transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-400 p-6 flex flex-col justify-between" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
-                <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-primary to-primary/70" />
+              <article key={idx} className="group relative overflow-hidden rounded-2xl transform hover:-translate-y-3 hover:shadow-2xl transition-all duration-400 p-6 flex flex-col justify-between bg-white/90 border border-transparent" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
+                <div className="absolute inset-x-6 -top-3 h-3 rounded-full bg-gradient-to-r from-primary to-primary/70 shadow-sm pointer-events-none" />
 
                 <div className="flex items-start gap-4">
-                  <div className="w-18 h-18 flex items-center justify-center rounded-full bg-gradient-to-br from-primary/95 to-primary/70 text-primary-foreground shadow-xl relative md:w-20 md:h-20">
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 flex items-center justify-center">{f.icon}</div>
-                    <span className="absolute -inset-2 rounded-full blur-sm opacity-40 bg-gradient-to-br from-primary/30 to-transparent" />
+                  <div className="w-18 h-18 flex items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl relative md:w-20 md:h-20">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center">{f.icon}</div>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-secondary">{f.title}</h3>
@@ -173,33 +173,11 @@ export const Services = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Clients / Testimonials strip */}
-      <section className="w-full py-12 bg-[#fffaf6]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <h3 className="text-center text-lg font-semibold text-secondary mb-6">Trusted by creatives & brands</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="card p-6">
-              <p className="text-sm text-[#47555b]">“Manoram handled our shoot across multiple locations — great logistics and a calm, professional team. Delivery was on time.”</p>
-              <div className="mt-4 text-sm font-medium text-secondary">— Creative Director, Kathmandu</div>
-            </div>
-
-            <div className="card p-6">
-              <p className="text-sm text-[#47555b]">“Local knowledge and excellent vendor relationships made the shoot easy. Highly recommended for complex shoots.”</p>
-              <div className="mt-4 text-sm font-medium text-secondary">— Producer, Pokhara</div>
-            </div>
-
-            <div className="card p-6">
-              <p className="text-sm text-[#47555b]">“Post-production was fast and the final grade matched the look we asked for. Smooth communication throughout.”</p>
-              <div className="mt-4 text-sm font-medium text-secondary">— Agency Rep, Lalitpur</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials removed */}
 
       <section className="w-full py-12 relative">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="bg-black text-white rounded-2xl px-6 py-8 relative overflow-visible">
+          <div className="bg-black text-white rounded-2xl px-6 py-8 relative overflow-visible shadow-2xl">
             <div className="flex items-center justify-start gap-6">
               <div>
                 <h3 className="text-xl font-semibold">Ready to start your production?</h3>
@@ -215,8 +193,8 @@ export const Services = (): JSX.Element => {
             </div>
 
             {/* pinned compact CTA inside the centered black box on md+ screens */}
-            <div className="hidden md:block absolute right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-10">
-              <Button asChild variant="primary" className="px-3 py-2 rounded-full text-sm shadow-lg">
+            <div className="hidden md:block absolute right-6 lg:right-10 top-1/2 transform -translate-y-1/2 z-10">
+              <Button asChild variant="primary" className="px-4 py-2 rounded-full text-sm shadow-xl">
                 <Link to="/contact" aria-label="Contact Our Team">Contact</Link>
               </Button>
             </div>

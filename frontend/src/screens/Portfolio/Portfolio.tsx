@@ -31,7 +31,7 @@ export const Portfolio = (): JSX.Element => {
     author: {
       "@type": "Organization",
       name: "Manoram Production",
-      url: "https://manoram-production.com",
+      url: "http://manoram-production.com.np",
     },
   }));
 

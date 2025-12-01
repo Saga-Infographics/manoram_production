@@ -2,7 +2,7 @@ export const SITE = {
   title: 'Manoram Production',
   description:
     'Manoram Production — portfolio, projects, media, and contact for bookings and collaborations.',
-  siteUrl: 'https://manoram-production.com', // production URL updated
+  siteUrl: 'http://manoram-production.com.np', // production URL updated
   defaultImage: '/og-image.png',
   author: 'Manoram Production',
   twitter: '@manoramprod',

@@ -4,4 +4,4 @@ User-agent: *
 Allow: /
 
 # Point to sitemap (replace example.com with your real domain before publishing)
-Sitemap: https://manoram-production.com/sitemap.xml
+Sitemap: http://manoram-production.com.np/sitemap.xml

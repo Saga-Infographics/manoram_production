@@ -18,7 +18,7 @@ This project is set up for local development using `npm run dev` and production 
 ## SEO setup (what I added)
 
 - Per-page meta component: `src/components/SEO/SEO.tsx` — use this at the top of each page component to set title/description/og image/canonical.
-- Site config: edit `src/lib/seo.ts` and set `siteUrl` to your production domain (important for canonical and sitemap). The default has been updated to `https://manoram-production.com`.
+ - Site config: edit `src/lib/seo.ts` and set `siteUrl` to your production domain (important for canonical and sitemap). The default has been updated to `http://manoram-production.com.np`.
 - Sitemap: `scripts/generate-sitemap.js` writes `public/sitemap.xml`. It's called automatically by the `build` script. Replace the site URL parameter in `package.json` scripts if needed.
 - Robots: `public/robots.txt` already references `/sitemap.xml`.
  # Manoram Production — Frontend (Vite + React + Tailwind)

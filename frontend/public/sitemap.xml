@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://manoram-production.com/</loc>
+    <loc>http://manoram-production.com.np/</loc>
     <lastmod>2025-11-24</lastmod>
   </url>
   <url>
-    <loc>https://manoram-production.com/portfolio</loc>
+    <loc>http://manoram-production.com.np/portfolio</loc>
     <lastmod>2025-11-24</lastmod>
       <image:image>
-        <image:loc>https://manoram-production.com/images/barista-balaram_2.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/barista-balaram_2.jpg</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/hostel_return2.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/hostel_return2.jpg</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/maun_2013.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/maun_2013.jpg</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/jhimkey_mama.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/jhimkey_mama.jpg</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/masantaar.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/masantaar.jpg</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/kaalaa_pathar_mathi.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/kaalaa_pathar_mathi.jpg</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/aakashkobato.webp</image:loc>
+        <image:loc>http://manoram-production.com.np/images/aakashkobato.webp</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://manoram-production.com/images/Final_sunkeshari-poster-KTM.jpg</image:loc>
+        <image:loc>http://manoram-production.com.np/images/Final_sunkeshari-poster-KTM.jpg</image:loc>
       </image:image>
   </url>
   <url>
-    <loc>https://manoram-production.com/about</loc>
+    <loc>http://manoram-production.com.np/about</loc>
     <lastmod>2025-11-24</lastmod>
   </url>
   <url>
-    <loc>https://manoram-production.com/contact</loc>
+    <loc>http://manoram-production.com.np/contact</loc>
     <lastmod>2025-11-24</lastmod>
   </url>
 </urlset>

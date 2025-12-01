@@ -6,8 +6,8 @@
   "description": "Manoram Production",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-sitemap.js https://manoram-production.com",
-    "generate:sitemap": "node scripts/generate-sitemap.js https://manoram-production.com"
+    "build": "vite build && node scripts/generate-sitemap.js http://manoram-production.com.np",
+    "generate:sitemap": "node scripts/generate-sitemap.js http://manoram-production.com.np"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.0",

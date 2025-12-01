@@ -37,7 +37,7 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
 
   return (
     <header className="w-full bg-white/70 backdrop-blur-md sticky top-0 z-50 shadow-md border-b border-transparent">
-      <nav className="container-modern flex items-center justify-between gap-6 py-4">
+      <nav className="container-modern flex items-center justify-between gap-6 py-5">
         <Link
           to="/"
           className={`flex items-center gap-4 transition-opacity duration-200 ${openMobile ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
@@ -48,7 +48,7 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
             <img className="w-16 h-16 md:w-24 md:h-24 object-contain drop-shadow-sm" alt="Manoram Production logo" src="/logo.png" title="Manoram Production" />
           </div>
           <div>
-            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-primary text-lg md:text-xl tracking-[0] leading-5 whitespace-nowrap">
+            <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-secondary text-lg md:text-xl tracking-[0] leading-5 whitespace-nowrap">
               Manoram Production
             </h1>
             <p className="text-xs text-gray-500 whitespace-nowrap">Productions • Media • Collaborations</p>
@@ -56,25 +56,28 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-4">
+            <ul className="flex items-center gap-4">
             {navigationItems.map((item) => (
               <li key={item.path}>
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "[font-family:'Open_Sans',Helvetica] text-sm px-4 py-2 rounded-full transition-colors duration-200 font-semibold text-primary bg-primary/10 shadow-sm"
-                      : "[font-family:'Open_Sans',Helvetica] text-sm px-4 py-2 rounded-full transition-colors duration-200 font-normal text-slate-800 hover:bg-primary/10 hover:text-primary"
+                      ? "group [font-family:'Open_Sans',Helvetica] text-sm px-4 py-2 rounded-full transition-colors duration-200 font-semibold text-secondary bg-primary/10 shadow-sm"
+                      : "group [font-family:'Open_Sans',Helvetica] text-sm px-4 py-2 rounded-full transition-colors duration-200 font-normal text-slate-800 hover:bg-primary/5 hover:text-secondary"
                   }
                 >
-                  {item.label}
+                  <span className="relative inline-block px-1 py-1">
+                    {item.label}
+                    <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-0.5 w-8 bg-primary rounded-full opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full" />
+                  </span>
                 </NavLink>
               </li>
             ))}
           </ul>
 
           <div className="flex items-center gap-4">
-            <Button asChild variant="primary" className="px-5 py-3 shadow-[var(--shadow-2)] hover:shadow-[var(--shadow-3)] transform hover:-translate-y-0.5 rounded-full">
+            <Button asChild variant="primary" className="px-6 py-3 shadow-[var(--shadow-2)] hover:shadow-[var(--shadow-3)] transform hover:-translate-y-0.5 rounded-full text-base">
               <a href="/contact">Get a Quote</a>
             </Button>
 
@@ -83,7 +86,7 @@ export const Header = ({ }: HeaderProps): JSX.Element => {
                 const Icon = icon.Icon;
                 return (
                   <a key={icon.alt} href={icon.url} target="_blank" rel="noopener noreferrer" aria-label={icon.alt} className="inline-block">
-                    <Button variant="ghost" size="icon" className="w-11 h-11 rounded-full p-0 hover:bg-secondary/10 text-secondary border-2 border-secondary/30">
+                    <Button variant="ghost" size="icon" className="w-11 h-11 rounded-full p-0 hover:bg-primary/10 text-secondary border-2 border-secondary/30 transform transition-transform duration-200 hover:-translate-y-0.5">
                       <Icon className="w-6 h-6" />
                     </Button>
                   </a>

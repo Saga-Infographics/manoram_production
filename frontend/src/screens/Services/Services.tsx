@@ -79,30 +79,31 @@ export const Services = (): JSX.Element => {
       />
       <Header activePage="Services" />
 
-      <section className="relative w-full py-20 bg-gradient-to-b from-[#f8fbff] to-white">
+      <section className="relative w-full py-24 bg-gradient-to-b from-[#fffaf6] to-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#0f2650] text-4xl md:text-5xl mb-4">
+              <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-secondary text-4xl md:text-5xl mb-4">
                 Production Services
               </h1>
-              <p className="[font-family:'Open_Sans',Helvetica] text-lg text-[#36454f] mb-6 max-w-2xl">
-                Manoram Production provides end-to-end production solutions — from pre-production planning and permits to full production management and post-production services. We support international and local teams across Nepal's diverse locations.
+              <p className="[font-family:'Open_Sans',Helvetica] text-lg text-[#47555b] mb-6 max-w-2xl leading-relaxed">
+                End-to-end production solutions across Nepal — from pre-production planning and permits to full production management and post-production. We partner with local crews and international creatives to deliver high-quality productions on time and on budget.
               </p>
 
-              <div className="flex gap-4 flex-wrap">
-                <Button asChild variant="primary" className="px-6 py-3">
+              <div className="flex gap-4 flex-wrap items-center">
+                <Button asChild variant="primary" className="px-6 py-3 rounded-full shadow-lg">
                   <a href="/contact">Get a Quote</a>
                 </Button>
-                <Button asChild variant="outline" className="px-6 py-3">
+                <Button asChild variant="outline" className="px-6 py-3 rounded-full">
                   <a href="/portfolio">See Our Work</a>
                 </Button>
+                <div className="ml-2 text-sm text-slate-600">Or call us: <a href="tel:+9779860765125" className="text-secondary font-medium">+977 986-0765125</a></div>
               </div>
             </div>
 
             <div className="flex justify-center">
-              <div className="w-full max-w-lg md:max-w-none flex items-center justify-center">
-                <img src="/logo.png" alt="Manoram Production logo" className="w-48 h-48 md:w-64 md:h-64 object-contain" loading="lazy" />
+              <div className="w-full max-w-sm md:max-w-md lg:max-w-lg transform hover:scale-[1.02] transition-transform duration-400">
+                <img src="/cover.jpg" alt="Production on location" className="w-full h-auto rounded-2xl shadow-xl object-cover" loading="lazy" />
               </div>
             </div>
           </div>
@@ -113,38 +114,53 @@ export const Services = (): JSX.Element => {
         <div className="container mx-auto px-6 md:px-40">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-3xl mb-8 text-center">What We Offer</h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {features.map((f, idx) => (
-              <article key={idx} className="card hover:shadow-lg transition-shadow duration-200 animate-fade-up flex flex-col justify-between h-full" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
+              <article key={idx} className="relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-2xl transition transform hover:-translate-y-2 animate-fade-up p-6 flex flex-col justify-between" style={{ ['--animation-delay' as any]: `${0.06 * idx}s` }}>
+                <div className="absolute left-4 top-4 w-14 h-1.5 bg-primary/80 rounded-full" />
+
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-primary/95 to-primary/70 text-primary-foreground shadow-md">
                     {f.icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">{f.title}</h3>
-                    <p className="text-sm text-[#47555b] mt-2">{f.desc}</p>
+                    <h3 className="font-semibold text-lg text-secondary">{f.title}</h3>
+                    <p className="text-sm text-[#58636b] mt-2">{f.desc}</p>
                   </div>
                 </div>
 
                 {f.items && (
-                  <ul className="mt-10 text-sm text-slate-600 list-disc list-inside space-y-1 max-w-[36ch]">
+                  <ul className="mt-6 text-sm text-slate-600 list-disc list-inside space-y-1 max-w-[40ch]">
                     {f.items.map((it, j) => (
                       <li key={j}>{it}</li>
                     ))}
                   </ul>
                 )}
 
-                <div className="mt-10">
-                  <p className="text-sm text-[#47555b]">We tailor each service to the project's needs — contact us to discuss logistics, crew, and timelines.</p>
-                </div>
+                <div className="mt-6 text-sm text-[#47555b]">We tailor each service to the project's needs — contact us to discuss logistics, crew, and timelines.</div>
 
-                <div className="mt-10">
-                  <Button asChild variant="primary" size="sm">
+                <div className="mt-6">
+                  <Button asChild variant="primary" size="sm" className="rounded-full px-4 py-2">
                     <Link to="/contact">Contact Us</Link>
                   </Button>
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex items-center justify-between gap-6">
+          <div>
+            <h3 className="text-xl font-semibold">Ready to start your production?</h3>
+            <p className="text-sm text-white/80">Tell us about your project and we'll prepare a tailored plan and estimate.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Button asChild variant="primary" className="px-5 py-3 rounded-full">
+              <Link to="/contact">Contact Our Team</Link>
+            </Button>
+            <Button asChild variant="outline" className="px-4 py-2 rounded-full bg-white/5 border-white/10 text-white">Learn More</Button>
           </div>
         </div>
       </section>
